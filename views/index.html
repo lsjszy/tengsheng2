@@ -1,3 +1,38 @@
 {{extend './_layouts/layout.html'}} {{block 'title'}}
 <title>首页</title>
-{{/block}} {{block 'style'}}{{/block}} {{block 'content'}} {{/block}} {{block 'script'}} {{/block}}
+{{/block}} {{block 'style'}}
+
+<link rel="stylesheet" href="/public/css/lunbotu.css">
+<link rel="stylesheet" href="/public/css/swiper.min.css"> {{/block}} {{block 'content'}}
+<!-- 轮播图 -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/public/img/1.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="/public/img/2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="/public/img/3.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="/public/img/4.jpg" alt=""></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next">&gt;</div>
+    <div class="swiper-button-prev">&lt;</div>
+</div>
+
+
+{{/block}} {{block 'script'}}
+
+<script src="/public/js/swiper.min.js"></script>
+<script>
+    // // 轮播图
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+</script>
+{{/block}}
