@@ -1,0 +1,106 @@
+.navbar{
+    width: 100%;
+    background-color: #fff;
+    .container{
+       .navbar-brand{
+           padding: 0px;
+           padding-top: 15px;
+       } 
+       .navbar-collapse{
+           ul{
+               li{
+                    margin-left: 10px;
+                    .fir-a{
+                        color: #38b549;
+                    }
+                    a{
+                        height: 102px;
+                        position: relative;
+                        background-color: #fff;  
+                        font-size: 16px; 
+                        color: #454545;             
+                        span{
+                            // display: none;
+                            position: absolute;
+                            top: 33px;
+                            left: -4px;
+                            width: 105px;
+                            height: 33px;
+                            border: 1px solid #38b549;
+                            border-radius: 15px;
+                            
+                        }
+                    }
+               }
+           }
+       }
+       .navbar-nav{
+           >li{
+               a{
+                    &:hover{
+                        background-color: #fff;
+                        color: #38b549;
+                    }
+               }
+           }
+           .drop_menu{
+            position: relative;
+               .dropdown1{
+                   display: none;
+                    position: absolute;
+                    top: 102px;
+                    left: -54px;
+                    list-style: none; 
+                    z-index: 10;                 
+                   li {                       
+                        background-color: rgba(30,30,30,0.9);
+                        border-bottom:1px solid #848484;
+                                            
+                       a{
+                           display: block;
+                            height: 40px;
+                            width: 100px;
+                            text-align: center;
+                            line-height: 40px;
+                            font-size: 14px;
+                            color: #fff;
+                            text-decoration: none;
+                            background-color: rgba(30,30,30,0.5);
+                            &:hover{
+                                background-color: #38b549;
+                          
+                            }
+                       }
+                   }
+               }
+           }
+       }
+       .navbar-form{
+           position: absolute;
+           top: 0px;
+           right: 0px;
+           .form-group{
+               margin-right: 40px;
+               position: relative;
+               input{
+                    border: 1px solid #ccc;
+                    // width: 165px;
+                    padding: 4px 5px;
+                    // border-color: #ccc;
+                    border-radius: 20px;
+                    outline: none!important;
+               }
+               
+               span{
+                   position: absolute;
+                   top: 50%;
+                   right: 8px;
+                   margin-top: -7px;
+                   color: #ccc;
+                   font-size: 16px;
+                   outline: none;
+               }
+           }
+       }
+    }
+}
