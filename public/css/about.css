@@ -1,0 +1,138 @@
+ul {
+  list-style: none;
+}
+.about .container {
+  position: relative;
+  margin-top: 40px;
+}
+.about .container .section-header .line {
+  margin-top: 40px;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+.about .container .section-header .font {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: -120px;
+  width: 240px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #fff;
+}
+.about .container .section-header .font h3 {
+  font-size: 30px;
+}
+.about .container .section-header .font p {
+  margin-top: -15px;
+  font-size: 18px;
+  color: #b8b8b8;
+}
+.about .container .about-body {
+  margin-top: 80px;
+  height: 285px;
+}
+.about .container .about-body .about-us-l {
+  float: left;
+  width: 52%;
+  background-color: #f2f2f2;
+}
+.about .container .about-body .about-us-l h1 {
+  display: block;
+  font-size: 18px;
+  color: #38b549;
+  line-height: 1;
+  padding: 14px 0 0px 0;
+}
+.about .container .about-body .about-us-l p {
+  text-indent: 2em;
+  display: block;
+  line-height: 30px;
+  color: #828282;
+  margin-top: 18px;
+  letter-spacing: 2px;
+}
+.about .container .about-body .about-us-l a {
+  display: block;
+  width: 92px;
+  height: 27px;
+  border: 1px solid #8f8f8f;
+  margin-top: 14px;
+  text-align: center;
+  line-height: 27px;
+  color: #5c5c5c;
+  transition: 0.5s;
+}
+.about .container .about-body .about-us-l a:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #7a7a7a;
+  border: 1px solid #7a7a7a;
+}
+.about .container .about-body .about-us-r {
+  float: right;
+  width: 48%;
+  text-align: center;
+  padding-left: 15px;
+}
+.about .container .about-body .about-us-r .count {
+  display: block;
+}
+.about .container .about-body .about-us-r ul {
+  margin: 0;
+  padding: 0;
+}
+.about .container .about-body .about-us-r ul li {
+  width: 32%;
+  float: left;
+  margin-right: 7px;
+  background-color: #f2f2f2;
+}
+.about .container .about-body .about-us-r ul li img {
+  width: 100%;
+}
+.about .container .about-body .about-us-r ul li h3 {
+  font-size: 18px;
+}
+.about .container .about-body .about-us-r ul li h3 a {
+  color: #5c5c5c;
+}
+.about .container .about-body .about-us-r ul li p {
+  font-size: 13px;
+}
+.about .container .about-body .about-us-r ul li:hover {
+  color: #fff;
+  background-color: #7a7a7a;
+}
+.about .container .about-body .about-us-r ul li:hover a {
+  text-decoration: none;
+  color: #fff;
+}
+.about .container .about-body .about-us-r ul li :last-child {
+  margin-right: 0px;
+}
+@media screen and (min-width: 768px) and (max-width: 1190px) {
+  .about-us-l {
+    width: 52%;
+  }
+  .about-us-r {
+    width: 48%!important;
+  }
+  .about-us-r li {
+    width: 30%!important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about-us-l {
+    width: 100%!important;
+    margin-bottom: 20px;
+  }
+  .about-us-r {
+    width: 100%!important;
+  }
+  .about-us-r li {
+    width: 31%!important;
+  }
+}

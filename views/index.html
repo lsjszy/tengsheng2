@@ -3,7 +3,9 @@
 {{/block}} {{block 'style'}}
 
 <link rel="stylesheet" href="/public/css/lunbotu.css">
-<link rel="stylesheet" href="/public/css/swiper.min.css"> {{/block}} {{block 'content'}}
+<link rel="stylesheet" href="/public/css/swiper.min.css">
+<link rel="stylesheet" href="/public/css/about.css">
+<link rel="stylesheet" href="/public/css/project.css"> {{/block}} {{block 'content'}}
 <!-- 轮播图 -->
 <div class="swiper-container">
     <div class="swiper-wrapper">
@@ -16,11 +18,80 @@
     <div class="swiper-button-next">&gt;</div>
     <div class="swiper-button-prev">&lt;</div>
 </div>
+<!-- 关于我们 -->
+<div class="about">
+    <div class="container">
+        <div class="section-header">
+            <div class="line"></div>
+            <div class="font">
+                <h3>关于我们</h3>
+                <p>ABOUT US</p>
+            </div>
+        </div>
+        <div class="about-body">
+            <div class="about-us-l">
+                <div class="left col-xs-12">
+                    <h1>郑州装饰公司-腾升建筑装饰股份有限公司</h1>
+                    <p>腾升装饰自1998年成立以来，梦想成为全球规模最大，最能满足客户需求，员工最有发展前景，最讲诚信的装饰企业。以探索需求、满足需求、创造需求为经营理念，孜孜不倦的深耕于装饰行业。主营业务为室内外装饰装修设计、施工与软装陈设。公司是河南省装饰行业第一家在新三板成功挂牌的装饰企业，证券简称：腾升装饰，证券代码：832569。 公司目前拥有建筑装饰工程设计</p>
+                    <a href="" class="">查看详情</a>
+                </div>
+            </div>
+            <div class="about-us-r">
+                <ul>
+                    {{each result}}
+                    <li>
+                        <a href="#">
+                            <img src="{{$value.avatar}}" alt="">
+                        </a>
+                        <h3><a href="">{{$value.nickname}}</a></h3>
+                        <p>{{$value.Englishname}}</p>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 产业领域 -->
+<div class="project">
+    <div class="container">
+        <div class="project-header">
+            <div class="line"></div>
+            <div class="font">
+                <h3>产业领域</h3>
+                <p>CAREER FIELD</p>
+            </div>
+        </div>
+        <div class="project-body">
+            <a href="javascript:;" class="btn prev">&lt;</a>
+            <a href="javascript:;" class="btn next">&gt;</a>
+            <div class="box">
+                <ul>
+                    {{each result2}}
+                    <li>
+                        <a href="">
+                            <img src="{{$value.avatar}}" alt="">
+                            <div class="mask">
+                                <span class="fdj"></span>
+                                <h4>{{$value.nickname}}</h4>
+                                <span class="project-arrow"></span>
+                            </div>
+                        </a>
+                        <p>{{$value.nickname}}</p>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
 
-
+        </div>
+    </div>
+</div>
 {{/block}} {{block 'script'}}
 
 <script src="/public/js/swiper.min.js"></script>
+<script src="/public/js/asbout.js"></script>
+<script src="/public/js/project.js"></script>
+
 <script>
     // // 轮播图
     var swiper = new Swiper('.swiper-container', {
