@@ -27,4 +27,4 @@ $(window).scroll(function() {
     } else {
         $('.go-top').fadeOut();
     }
-})
+}) 
