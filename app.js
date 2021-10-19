@@ -7,13 +7,13 @@ const router = require('./router')
 const app = express()
 
 
-mongoose.connect("mongodb://localhost:27017/myblog");
+mongoose.connect("mongodb://localhost:27017/myblog1");
 // 获取连接对象，打印连接是否成功
 var db = mongoose.connection;
 db.on("error", () => {
     console.log("连接出错");
 });
-db.once("open", function() {
+db.once("open", function () {
     console.log("连接成功");
 });
 app.use(

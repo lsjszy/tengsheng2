@@ -9,7 +9,18 @@
     <!-- 引入导航栏的样式 -->
     <link rel="stylesheet" href="/public/css/navbar.css">
     <link rel="stylesheet" href="/public/css/footer.css">
-    <link rel="stylesheet" href="/public/css/main.css"> {{block 'style'}} {{/block}}
+    <link rel="stylesheet" href="/public/css/main.css">
+
+    <!-- 新增 -->
+    <!-- 引入轮播图样式 -->
+    <link rel="stylesheet" href="/public/css/swiper.min.css">
+    <link rel="stylesheet" href="/public/css/lunbotu.css">
+    <!-- 引入主体样式 -->
+    <!-- <link rel="stylesheet" href="/public/css/zhuti.css"> -->
+
+    {{block 'link'}}{{/block}}
+
+    {{block 'style'}} {{/block}}
 </head>
 
 <body>
@@ -20,7 +31,9 @@
     <script src="/public/js/jquery-3.1.1.js"></script>
     <script src="/public/js/go_top.js"></script>
     <script src="/public/js/navbar.js"></script>
-    {{block 'script'}} {{/block}}
+    <!-- 新增 -->
+    <script src="/public/js/swiper.min.js"></script>
+    {{block 'script'}}{{/block}}
 </body>
 
 </html>

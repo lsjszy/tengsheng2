@@ -1,0 +1,79 @@
+.main {
+    .main-header {
+        height       : 50px;
+        line-height  : 50px;
+        border-bottom: 1px solid #ccc;
+
+        >div {
+            .position {
+                a {
+                    color: gray;
+
+                    span {
+                        color: gray;
+                    }
+
+                    &:hover {
+                        color          : rgb(45, 161, 45);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .artical {
+        padding: 20px 0;
+
+        .artical-header {
+            h1 {
+                font-size : 20px;
+                text-align: center;
+            }
+
+            p {
+                font-size       : 10px;
+                text-align      : center;
+                margin          : 20px 0;
+                height          : 40px;
+                padding         : 10px;
+                background-color: #ddd;
+                color           : gray;
+
+                span {
+                    display: inline-block;
+                    margin : 0 2%;
+                }
+            }
+        }
+
+        .artical-body {
+            p {
+                font-size       : 15px;
+                padding         : 20px 0;
+                background-color: #eee;
+                color           : rgb(80, 76, 76);
+            }
+        }
+
+        .artical-footer {
+            margin-top: 30px;
+            border-top: 1px solid black;
+
+            .choose-artical {
+                margin-top: 30px;
+
+                a {
+                    width  : 120px;
+                    color  : gray;
+                    display: block;
+
+                    &:hover {
+                        text-decoration: none;
+                        color          : rgb(45, 161, 45);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,215 @@
+.main {
+    .main-header {
+        height       : 50px;
+        line-height  : 50px;
+        border-bottom: 1px solid #ccc;
+
+        .position {
+            a {
+                color          : gray;
+                text-decoration: none;
+
+                &:hover {
+                    color: green;
+                }
+
+                span {
+                    color: gray;
+
+                    &:hover {
+                        color: gray;
+                    }
+                }
+            }
+        }
+    }
+
+    .center {
+        text-align: center;
+        margin    : 0px auto;
+
+        .zt-top {
+            h1 {
+                font-size: 30px;
+                color    : green;
+                margin   : 20px;
+            }
+        }
+
+        .zt-center {
+            margin    : 20px;
+            display   : block;
+            text-align: center;
+            overflow  : hidden;
+
+            ul {
+                display: block;
+                margin : -2% -1%;
+
+
+                li {
+                    display: inline-block;
+                    margin : 2% 0%;
+
+                    &:hover {
+                        >div {
+
+                            >a {
+                                display        : block;
+                                overflow       : hidden;
+                                text-decoration: none;
+                                padding        : 20px;
+
+                                img {
+                                    width             : 120%;
+                                    height            : 150px;
+                                    margin-left       : -25px;
+                                    transition        : 0.5s;
+                                    -o-transition     : 0.5s;
+                                    -ms-transition    : 0.5s;
+                                    -moz-transition   : 0.5s;
+                                    -webkit-transition: 0.5s;
+                                }
+                            }
+
+                            >div {
+                                background-color: gray;
+                                padding         : 10px 0px;
+
+                                h4 {
+                                    display          : block;
+                                    line-height      : 1;
+                                    font-size        : 16px;
+                                    white-space      : nowrap;
+                                    overflow         : hidden;
+                                    -ms-text-overflow: ellipsis;
+                                    text-overflow    : ellipsis;
+                                    margin-bottom    : 20px;
+
+
+                                    >a {
+                                        color          : white;
+                                        text-decoration: none;
+                                    }
+                                }
+
+                                >a {
+                                    color          : white;
+                                    text-decoration: none;
+                                    border         : 1px solid white;
+                                    padding        : 5px;
+                                }
+                            }
+                        }
+                    }
+
+                    >div {
+
+                        >a {
+                            display        : block;
+                            overflow       : hidden;
+                            text-decoration: none;
+                            padding        : 20px;
+
+                            img {
+                                width : 100%;
+                                height: 150px;
+                            }
+                        }
+
+                        >div {
+                            background-color: #f5f5f5;
+                            padding         : 10px 0px;
+
+
+                            h4 {
+                                display          : block;
+                                line-height      : 1;
+                                font-size        : 16px;
+                                white-space      : nowrap;
+                                overflow         : hidden;
+                                -ms-text-overflow: ellipsis;
+                                text-overflow    : ellipsis;
+                                margin-bottom    : 20px;
+
+
+                                >a {
+                                    color          : dimgray;
+                                    text-decoration: none;
+
+                                }
+                            }
+
+                            >a {
+                                color          : dimgray;
+                                text-decoration: none;
+                                border         : 1px solid #aaa;
+                                padding        : 5px;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .fy {
+            text-align: center;
+            padding   : 30px;
+
+            a {
+                font-size       : 14px;
+                padding         : 5px 10px;
+                color           : #666666;
+                border          : 1px solid gainsboro;
+                background-color: white;
+                border-radius   : 5px;
+                margin          : 0 3px;
+                text-decoration : none;
+
+                &:hover {
+                    background-color: green;
+                    color           : white;
+                }
+            }
+
+            span {
+                font-size       : 14px;
+                padding         : 5px 10px;
+                color           : white;
+                border          : 1px solid forestgreen;
+                background-color: green;
+                border-radius   : 5px;
+                margin          : 0 3px;
+
+                &:hover {
+                    background-color: green;
+                    color           : white;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width:768px) and (max-width:1200px) {
+        .main {
+            width : 100%;
+            height: 100%;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .main {
+            width : 100%;
+            height: 100%;
+        }
+    }
+}
+
+* {
+    -moz-box-sizing            : border-box;
+    -webkit-box-sizing         : border-box;
+    -o-box-sizing              : border-box;
+    -ms-box-sizing             : border-box;
+    box-sizing                 : border-box;
+    -webkit-tap-highlight-color: transparent;
+}

@@ -1,0 +1,166 @@
+.main .main-header {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+}
+.main .main-header .position a {
+  color: gray;
+  text-decoration: none;
+}
+.main .main-header .position a:hover {
+  color: green;
+}
+.main .main-header .position a span {
+  color: gray;
+}
+.main .main-header .position a span:hover {
+  color: gray;
+}
+.main .center {
+  text-align: center;
+  margin: 0px auto;
+}
+.main .center .zt-top h1 {
+  font-size: 30px;
+  color: green;
+  margin: 20px;
+}
+.main .center .zt-center {
+  margin: 20px;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+}
+.main .center .zt-center ul {
+  display: block;
+  margin: -2% -1%;
+}
+.main .center .zt-center ul li {
+  display: inline-block;
+  margin: 2% 0%;
+}
+.main .center .zt-center ul li:hover > div > a {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  padding: 20px;
+}
+.main .center .zt-center ul li:hover > div > a img {
+  width: 120%;
+  height: 150px;
+  margin-left: -25px;
+  transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.main .center .zt-center ul li:hover > div > div {
+  background-color: gray;
+  padding: 10px 0px;
+}
+.main .center .zt-center ul li:hover > div > div h4 {
+  display: block;
+  line-height: 1;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  margin-bottom: 20px;
+}
+.main .center .zt-center ul li:hover > div > div h4 > a {
+  color: white;
+  text-decoration: none;
+}
+.main .center .zt-center ul li:hover > div > div > a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 5px;
+}
+.main .center .zt-center ul li > div > a {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  padding: 20px;
+}
+.main .center .zt-center ul li > div > a img {
+  width: 100%;
+  height: 150px;
+}
+.main .center .zt-center ul li > div > div {
+  background-color: #f5f5f5;
+  padding: 10px 0px;
+}
+.main .center .zt-center ul li > div > div h4 {
+  display: block;
+  line-height: 1;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  margin-bottom: 20px;
+}
+.main .center .zt-center ul li > div > div h4 > a {
+  color: dimgray;
+  text-decoration: none;
+}
+.main .center .zt-center ul li > div > div > a {
+  color: dimgray;
+  text-decoration: none;
+  border: 1px solid #aaa;
+  padding: 5px;
+}
+.main .center .fy {
+  text-align: center;
+  padding: 30px;
+}
+.main .center .fy a {
+  font-size: 14px;
+  padding: 5px 10px;
+  color: #666666;
+  border: 1px solid gainsboro;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0 3px;
+  text-decoration: none;
+}
+.main .center .fy a:hover {
+  background-color: green;
+  color: white;
+}
+.main .center .fy span {
+  font-size: 14px;
+  padding: 5px 10px;
+  color: white;
+  border: 1px solid forestgreen;
+  background-color: green;
+  border-radius: 5px;
+  margin: 0 3px;
+}
+.main .center .fy span:hover {
+  background-color: green;
+  color: white;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .main .main {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main .main {
+    width: 100%;
+    height: 100%;
+  }
+}
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
