@@ -1,20 +1,21 @@
-{{extend './_layouts/layout.html'}}
-
+{{extend '../_layouts/layout.html'}}
 {{block 'link'}}
-<link rel="stylesheet" href="/public/css/zhuti.css">
+<link rel="stylesheet" type="text/css" href="/public/css/zhuti1.css">
 {{/block}}
-
 {{block 'title'}}
 <title>合作客户</title>
-{{/block}} {{block 'style'}}{{/block}}
+{{/block}}
+
+{{block 'style'}}{{/block}}
 
 {{block 'content'}}
 <!-- 轮播图 -->
 <div class="swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="/public/img/lunbo.jpg" alt="" style="width: 95%;"></div>
+        <div class="swiper-slide"><img src="/public/img/lunbo.jpg" alt=""></div>
     </div>
 </div>
+
 <!-- 主体 -->
 <div class="main">
     <div class="main-header">
@@ -24,48 +25,46 @@
                     <span class="glyphicon glyphicon-home" aria-hidden="true"></span> 主页
                 </a>
                 >
-                <a href="#">合作客户</a>
+                <a href="/">合作客户</a>
                 >
             </div>
         </div>
     </div>
-    <div class="center">
-        <div class="zt-top text-center">
-            <h1>合作客户</h1>
+    <div class="artical container clearfix">
+        <div class="artical-header">
+            <h1>融信中国</h1>
+            <p>
+                <span>发表时间：2021年03月02日</span>
+                <span>
+                    浏览量：893
+                </span>
+            </p>
         </div>
-        <div class="zt-center text-center">
-            <div class="container">
-                <div class="row">
-                    <ul>
-                        {{each result}}
-                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <div class="content">
-                                <a href="/topic/article" class="pic">
-                                    <img src="{{$value.avatar}}" style="vertical-align: middle;">
-                                </a>
-                                <div class="text">
-                                    <h4>
-                                        <a href="/topic/article">{{$value.title}}</a>
-                                    </h4>
-                                    <a href="/topic/article">{{$value.dio}}</a>
-                                </div>
-                            </div>
-                        </li>
-                        {{/each}}
-                    </ul>
-                </div>
+        <div class="artical-body">
+            <p>融信中国控股有限公司（简称融信中国，股票代码：3301.HK），
+                是一家于香港联交所上市，专注于中高端住宅开发的大型现代化
+                企业集团，地产开发拥有国家一级开发资质，位列中国房地产企
+                业22强。
+            </p>
+            <p>
+                融信中国战略布局全国8大核心城市群：海峡西岸、长三角、长
+                江中游、大湾区、京津冀、中原、成渝、西北城市群。坚持中
+                高端精品战略，尊重城市文化肌理，坚持以品质影响城市，集
+                国际一流建筑师、设计师智慧，联合知名承建商倾力打造符合
+                当地市场需求的标杆产品。
+            </p>
+            <p>
+                迄今，在上海、杭州、南京、苏州、广州、福州、厦门、郑州、
+                天津等地拥有众多项目，产品涵盖高端公寓、别墅、服务式公寓
+                、写字楼、商业综合体等多种物业类型，总投资额超5000亿元人
+                民币。
+            </p>
+        </div>
+        <div class="artical-footer clearfix">
+            <div class="choose-artical">
+                <a href="">上一篇：中南集团</a>
+                <a href="">下一篇：银基地产</a>
             </div>
-
-        </div>
-        <div class="fy">
-            <a href="/">首页</a>
-            <span class="active">1</span>
-            <a href="/topic/one">2</a>
-            <a href="/topic/one2">3</a>
-            <a href="/topic/one3">4</a>
-            <a href="/topic/one4">5</a>
-            <a href="/topic/one2">下一页</a>
-            <a href="/topic/one4">末页</a>
         </div>
     </div>
 </div>

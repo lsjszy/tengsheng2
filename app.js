@@ -7,7 +7,7 @@ const router = require('./router')
 const app = express()
 
 
-mongoose.connect("mongodb://localhost:27017/myblog1");
+mongoose.connect("mongodb://localhost:27017/myblog");
 // 获取连接对象，打印连接是否成功
 var db = mongoose.connection;
 db.on("error", () => {

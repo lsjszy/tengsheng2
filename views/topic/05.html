@@ -1,20 +1,21 @@
-{{extend './_layouts/layout.html'}}
-
+{{extend '../_layouts/layout.html'}}
 {{block 'link'}}
-<link rel="stylesheet" href="/public/css/zhuti.css">
+<link rel="stylesheet" type="text/css" href="/public/css/zhuti1.css">
 {{/block}}
-
 {{block 'title'}}
 <title>合作客户</title>
-{{/block}} {{block 'style'}}{{/block}}
+{{/block}}
+
+{{block 'style'}}{{/block}}
 
 {{block 'content'}}
 <!-- 轮播图 -->
 <div class="swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="/public/img/lunbo.jpg" alt="" style="width: 95%;"></div>
+        <div class="swiper-slide"><img src="/public/img/lunbo.jpg" alt=""></div>
     </div>
 </div>
+
 <!-- 主体 -->
 <div class="main">
     <div class="main-header">
@@ -24,51 +25,30 @@
                     <span class="glyphicon glyphicon-home" aria-hidden="true"></span> 主页
                 </a>
                 >
-                <a href="#">合作客户</a>
+                <a href="../合作客户.html">合作客户</a>
                 >
             </div>
         </div>
     </div>
-    <div class="center">
-        <div class="zt-top text-center">
-            <h1>合作客户</h1>
+    <div class="artical container clearfix">
+        <div class="artical-header">
+            <h1>汇艺置业</h1>
+            <p>
+                <span>发表时间：2018年08月14日</span>
+                <span>
+                    浏览量：288
+                </span>
+            </p>
         </div>
-        <div class="zt-center text-center">
-            <div class="container">
-                <div class="row">
-                    <ul>
-                        {{each result}}
-                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <div class="content">
-                                <a href="/topic/article" class="pic">
-                                    <img src="{{$value.avatar}}" style="vertical-align: middle;">
-                                </a>
-                                <div class="text">
-                                    <h4>
-                                        <a href="/topic/article">{{$value.title}}</a>
-                                    </h4>
-                                    <a href="/topic/article">{{$value.dio}}</a>
-                                </div>
-                            </div>
-                        </li>
-                        {{/each}}
-                    </ul>
-                </div>
+        <div class="artical-footer clearfix">
+            <div class="choose-artical">
+                <a href="">上一篇：华启集团</a>
+                <a href="">下一篇：亚星置业</a>
             </div>
-
-        </div>
-        <div class="fy">
-            <a href="/">首页</a>
-            <span class="active">1</span>
-            <a href="/topic/one">2</a>
-            <a href="/topic/one2">3</a>
-            <a href="/topic/one3">4</a>
-            <a href="/topic/one4">5</a>
-            <a href="/topic/one2">下一页</a>
-            <a href="/topic/one4">末页</a>
         </div>
     </div>
 </div>
+
 {{/block}}
 
 {{block 'script'}}
