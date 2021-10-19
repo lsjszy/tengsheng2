@@ -140,15 +140,18 @@ a {
     right: 16px!important;
     top: 180px!important;
   }
+  .mask {
+    height: 160px!important;
+  }
 }
 @media screen and (max-width: 650px) {
   .mask {
     height: 194px!important;
   }
   .mask h4 {
-    display: none;
+    display: none!important;
   }
   .mask .project-arrow {
-    display: none;
+    display: none!important;
   }
 }

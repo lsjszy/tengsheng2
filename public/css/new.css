@@ -1,0 +1,182 @@
+.news {
+  margin-top: 30px;
+  position: relative;
+}
+.news .news-header .line {
+  margin-top: 50px;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+.news .news-header .font {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: -120px;
+  width: 240px;
+  height: 80px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #fff;
+}
+.news .news-header .font h3 {
+  font-size: 30px;
+}
+.news .news-header .font p {
+  margin-top: -15px;
+  font-size: 18px;
+  color: #b8b8b8;
+}
+.news .news-body {
+  margin-top: 80px;
+}
+.news .news-body .important-news {
+  float: left;
+  display: block;
+  width: 40%;
+}
+.news .news-body .important-news a {
+  display: block;
+  position: relative;
+}
+.news .news-body .important-news a img {
+  width: 100%;
+}
+.news .news-body .important-news a .date {
+  position: absolute;
+  width: 67px;
+  height: 64px;
+  top: 0;
+  left: 0;
+  background-color: #39b549;
+  text-align: center;
+  color: #fff;
+}
+.news .news-body .important-news a .date .day {
+  display: block;
+  font-size: 34px;
+  color: #fff;
+  line-height: 1;
+  margin-top: 8px;
+}
+.news .news-body .important-news a .date .month {
+  display: block;
+  line-height: 1;
+  color: #fff;
+  font-size: 13px;
+  margin-top: 3px;
+}
+.news .news-body .important-news h4 {
+  display: block;
+  margin-top: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 16px;
+}
+.news .news-body .important-news h4 a {
+  color: #5c5c5c;
+}
+.news .news-body .important-news h4 a:hover {
+  color: #38b549;
+}
+.news .news-body .important-news > p {
+  display: block;
+  text-indent: 2em;
+  line-height: 23px;
+  color: #868686;
+  margin-top: 8px;
+}
+.news .news-body .orther-news {
+  float: right;
+  display: block;
+  width: 57%;
+  overflow: hidden;
+}
+.news .news-body .orther-news ul {
+  height: 400px;
+  margin: 0;
+  padding: 0;
+}
+.news .news-body .orther-news ul li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #d1d1d1;
+}
+.news .news-body .orther-news ul li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.news .news-body .orther-news ul li .date {
+  display: block;
+  width: 64px;
+  height: 71px;
+  float: left;
+  margin-right: 15px;
+  overflow: hidden;
+  border: 1px solid #b2b2b2;
+  text-align: center;
+}
+.news .news-body .orther-news ul li .date .day {
+  display: block;
+  font-size: 40px;
+  color: #7e7e7e;
+  line-height: 1;
+  margin-top: 6px;
+}
+.news .news-body .orther-news ul li .date .month {
+  display: block;
+  line-height: 1;
+  font-size: 13px;
+  color: #5c5c5c;
+  margin-top: 4px;
+}
+.news .news-body .orther-news ul li .content h4 {
+  margin: 0;
+  display: block;
+  font-size: 16px;
+  color: #5c5c5c;
+}
+.news .news-body .orther-news ul li .content h4 a {
+  color: #5c5c5c;
+}
+.news .news-body .orther-news ul li .content h4 a:hover {
+  color: #38b549;
+}
+.news .news-body .orther-news ul li .content p {
+  display: block;
+  line-height: 23px;
+  color: #767676;
+  margin-top: 6px;
+}
+.news .more {
+  display: block;
+  height: 36px;
+  line-height: 36px;
+  background-color: #ebebeb;
+  color: #666;
+  text-align: center;
+  margin-top: 50px;
+}
+.news .more a {
+  display: block;
+  color: #666;
+}
+.news .more a:hover {
+  color: #fff;
+  background-color: #7a7a7a;
+}
+@media screen and (max-width: 768px) {
+  .news-body .orther-news {
+    width: 100%!important;
+    float: none!important;
+    margin-top: 6%;
+  }
+  .news-body .important-news {
+    width: 100%!important;
+    float: none!important;
+  }
+}
+@media screen and (min-width: 975px) and (max-width: 1185px) {
+  .news {
+    margin-top: 113px!important;
+  }
+}
