@@ -1,0 +1,118 @@
+{{extend './_layouts/layout.html'}}
+{{block 'title'}}
+<title>企业文化</title>
+{{/block}}
+
+{{block 'style'}}
+<link rel="stylesheet" href="/public/css/about.css">
+<link rel="stylesheet" href="/public/css/main.css">
+<link rel="stylesheet" href="/public/css/lunbotu.css">
+<link rel="stylesheet" href="/public/css/swiper.min.css">
+<link rel="stylesheet" href="/public/css/dizhi.css">
+<link rel="stylesheet" href="/public/css/top.css">
+{{/block}}
+
+{{block 'content'}}
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/public/img/about-banner.jpg" alt=""></div>
+    </div>
+</div>
+<div class="main">
+    <div class="main-header">
+        <div class="container clearfix">
+            <div class="position">
+                <a href="../魏士涵/index.html">主页</a>>
+                <a href="./公司地址.html">联系我们</a>>
+                <a href="./企业简介.html">企业简介</a>
+            </div>
+            <!-- 二级导航 -->
+            <div class="subnav profile-nav">
+                <ul>
+                    <li class="active">
+                        <a href="./企业简介.html">企业简介</a>
+                    </li>
+                    <li>
+                        <a href="./企业文化.html">企业文化</a>
+                    </li>
+                    <li>
+                        <a href="./企业荣誉.html">企业荣誉</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-header">
+            <h3>
+                <span class="black">企业文化</span>
+            </h3>
+        </div>
+        <div class="profile container clearfix">
+            <span style="font-size: 20px;color: rgb(114, 114, 114); font-family: 微软雅黑;">
+                <br>
+                <span>
+                    一、腾升使命<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 创造人们向往的生活和工作空间，让更多的人享受我们高品质的装饰产品。<br>
+                </span>
+                <span>
+                    二、腾升价值观<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）站在客户的立场审视自己的工作，不能因为客户的态度妨碍对客户的优质服务。对待客户要友善、公平，建立长久的客户关系需要时间，不要以破坏与客户的持久关系为代价，去追求短期利润的最大化。每天都要与客户进行交流，了解客户的需求。<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）对待供应商要讲诚信，通过帮助供应商降低成本，使我们的成本降低。<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（3）对待施工队要讲公平，通过精细化管理，在平方单价低于市场单价的情况下，让施工队得到比市场高的收入。<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（4）在公司内部，要互相提醒、互相关心、互相扶持、互相激励，共同拿到成果。企业领导人员要吃苦在前，享受在后。
+                    上级要服务下级，下级要服从上级。<br>
+                </span>
+                <span>
+                    三、腾升精神<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以勤补拙、勇于创新<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;坚韧不拔、自强不息<br>
+                </span>
+                <span>
+                    四、腾升质量方针<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以细节见证完美，以品质铸就辉煌。<br>
+                </span>
+                <span>
+                    五、腾升经营理念<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;探索需求、满足需求、创造需求。<br>
+                </span>
+                <span>
+                    六、腾升人才观<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;把平凡的人培养成优秀的管理者和专家。<br>
+                </span>
+                <span>
+                    七、腾升营销理念<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;承接一个项目，建立一座丰碑，交一批朋友、开发一片市场。<br>
+                </span>
+                <span>
+                    八、腾升愿景<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成为全球规模最大，最能满足客户需求，员工最有发展前景，最讲诚信的装饰企业。<br>
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+
+{{/block}}
+{{block 'script'}}
+<script src="/public/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+    $('.swiper-wrapper').bind('mouseenter', function () {
+        $('.swiper-button-next').fadeIn();
+        $('.swiper-button-prev').fadeIn();
+    })
+    $('.swiper-wrapper').bind('mouseleave', function () {
+        $('.swiper-button-next').fadeOut();
+        $('.swiper-button-prev').fadeOut();
+    })
+</script>
+{{/block}}

@@ -1,0 +1,197 @@
+.main .subnav {
+  display: block;
+  float: right;
+}
+.main .subnav li {
+  list-style: none;
+  float: right;
+  margin: 0 15px;
+}
+.main .subnav li a {
+  color: #777;
+}
+.main .section-header span {
+  display: block;
+  text-align: center;
+}
+.main .profile {
+  font-size: 14px;
+  overflow: hidden;
+  clear: both;
+  line-height: 1.7;
+  color: #777;
+}
+.main .profile span {
+  font-size: 16px;
+  box-sizing: border-box;
+  color: #777;
+  overflow: hidden;
+  line-height: 1.42857143;
+  clear: both;
+}
+.main .footer {
+  width: 100%;
+  margin-top: 40px;
+  background-color: #525252;
+}
+.main .footer .footer-body .box-l {
+  margin-top: 29px;
+  float: left;
+  width: 590px;
+}
+.main .footer .footer-body .box-l .contact-way {
+  display: block;
+}
+.main .footer .footer-body .box-l .contact-way .ewm {
+  float: left;
+}
+.main .footer .footer-body .box-l .contact-way .ewm .img {
+  float: left;
+  width: 124px;
+  height: 124px;
+  margin-right: 8px;
+}
+.main .footer .footer-body .box-l .contact-way .info {
+  float: left;
+  margin-left: 7px;
+}
+.main .footer .footer-body .box-l .contact-way .info h2 {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border-left: 1px solid #38b549;
+  font-size: 16px;
+  line-height: 1;
+  color: #fff;
+}
+.main .footer .footer-body .box-l .contact-way .info ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 16px;
+}
+.main .footer .footer-body .box-l .contact-way .info ul li {
+  margin: 0;
+  padding: 0;
+  height: 33px;
+  line-height: 33px;
+  color: #b9b9b9;
+}
+.main .footer .footer-body .box-l .contact-way .info ul li i {
+  display: block;
+  float: left;
+  margin: 7px 14px 0 0;
+}
+.main .footer .footer-body .box-l .contact-way .info ul li .addr-icon {
+  background: url(../img/allbgs.png) no-repeat -30px 0px;
+  width: 20px;
+  padding-top: 17px;
+}
+.main .footer .footer-body .box-l .contact-way .info ul li .phone-icon-s {
+  background: url(../img/allbgs.png) no-repeat -50px 0px;
+  width: 17px;
+  padding-top: 18px;
+}
+.main .footer .footer-body .box-l .contact-way .info ul li .wz-icon {
+  background: url(../img/allbgs.png) no-repeat -14px 0px;
+  width: 16px;
+  padding-top: 17px;
+}
+.main .footer .footer-body .box-l .phone {
+  float: left;
+  display: block;
+  height: 39px;
+  line-height: 39px;
+  margin-top: 15px;
+  font-size: 20px;
+  color: #38b549;
+}
+.main .footer .footer-body .box-l .phone i {
+  display: block;
+  float: left;
+  margin: 0 10px 0 14px;
+}
+.main .footer .footer-body .box-l .phone .phone-icon {
+  background: url(../img/allbgs.png) no-repeat -269px 0px;
+  width: 40px;
+  padding-top: 40px;
+}
+.main .footer .footer-body .box-r {
+  float: right;
+  margin-top: 29px;
+  width: 550px;
+}
+.main .footer .footer-body .box-r .mune .list {
+  padding: 0 45px;
+  height: 146px;
+  float: left;
+  border-left: 1px solid #b9b9b9;
+}
+.main .footer .footer-body .box-r .mune .list:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+.main .footer .footer-body .box-r .mune .list:last-child {
+  padding-right: 0;
+}
+.main .footer .footer-body .box-r .mune .list h4 {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+}
+.main .footer .footer-body .box-r .mune .list ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+.main .footer .footer-body .box-r .mune .list ul li {
+  height: 28px;
+  line-height: 28px;
+  list-style: none;
+}
+.main .footer .footer-body .box-r .mune .list ul li a {
+  color: #b9b9b9;
+}
+.main .footer .web-info {
+  height: 60px;
+  line-height: 60px;
+  margin-top: 34px;
+  color: #e4e4e4;
+  background-color: #393939;
+}
+.main .footer .web-info .container .l {
+  float: left;
+}
+.main .footer .web-info .container .l a {
+  color: #e4e4e4;
+}
+.main .footer .web-info .container .r {
+  float: right;
+}
+.main .footer .web-info .container .r a {
+  color: #e4e4e4;
+}
+.main .footer .web-info .container .r a span {
+  padding: 1px 5px;
+  background-color: #41A5F5;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .main .footer .box-l {
+    width: 100% !important;
+  }
+  .main .footer .box-r {
+    display: none !important;
+    float: none !important;
+  }
+  .main .footer .web-info span {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .main .footer .box-l {
+    width: 100% !important;
+  }
+  .main .footer .box-r {
+    float: none !important;
+  }
+}

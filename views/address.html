@@ -1,0 +1,111 @@
+{{extend './_layouts/layout.html'}}
+{{block 'title'}}
+<title>公司地址</title>
+{{/block}}
+
+{{block 'style'}}
+<link rel="stylesheet" href="/public/css/about.css">
+<link rel="stylesheet" href="/public/css/main.css">
+<link rel="stylesheet" href="/public/css/lunbotu.css">
+<link rel="stylesheet" href="/public/css/swiper.min.css">
+<link rel="stylesheet" href="/public/css/dizhi.css">
+<link rel="stylesheet" href="/public/css/top.css">
+{{/block}}
+
+{{block 'content'}}
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/public/img/about-banner.jpg" alt=""></div>
+    </div>
+</div>
+<div class="main">
+    <div class="main-header">
+        <div class="container clearfix">
+            <div class="position">
+                <a href="../魏士涵/index.html">主页</a>>
+                <a href="./公司地址.html">联系我们</a>>
+                <a href="./企业简介.html">企业简介</a>
+            </div>
+            <!-- 二级导航 -->
+            <div class="subnav profile-nav">
+                <ul>
+                    <li>
+                        <a href="./公司地址.html">公司地址</a>
+                    </li>
+                    <li class="active">
+                        <a href="./人才招聘.html">人才招聘</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-header">
+            <h3>
+                <span class="black">公司地址</span>
+            </h3>
+        </div>
+        <div class="profile container clearfix">
+            <div class="box">
+                <div class="tit">
+                    <h1>郑州装饰公司-腾升建筑装饰股份有限公司</h1>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <span class="addr">公司地址</span>
+                            <p style="padding: 0px;
+    margin: 0px;">郑州市商鼎路和顺街（广地和顺中心B座3楼）
+                            </p>
+                        </li>
+                        <li>
+                            <span class="phone">VIP热线</span>
+                            <p>0371-65359859
+                            </p>
+                        </li>
+                        <li>
+                            <span class="addr">公司传真</span>
+                            <p>0371-66366735
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box1">
+                <span>
+                    <br><br>
+                    <strong>固定电话:0371-65359859/65359869/65359980</strong><br><br><br>
+                    <span>
+                        设计分公司地址：郑州郑东新区商鼎路和顺街（广地和顺中心B座3楼）<br>
+                        行政办公地址：郑州市管城区二里岗街11号院2号楼3单元7号<br>
+                    </span>
+                </span><br>
+                <img src="/public/img/1-1P30G42604322.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/block}}
+{{block 'script'}}
+<script src="/public/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+    $('.swiper-wrapper').bind('mouseenter', function () {
+        $('.swiper-button-next').fadeIn();
+        $('.swiper-button-prev').fadeIn();
+    })
+    $('.swiper-wrapper').bind('mouseleave', function () {
+        $('.swiper-button-next').fadeOut();
+        $('.swiper-button-prev').fadeOut();
+    })
+</script>
+{{/block}}

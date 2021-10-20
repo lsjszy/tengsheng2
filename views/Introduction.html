@@ -1,0 +1,104 @@
+{{extend './_layouts/layout.html'}}
+{{block 'title'}}
+<title>企业简介</title>
+{{/block}}
+
+{{block 'style'}}
+<link rel="stylesheet" href="/public/css/about.css">
+<link rel="stylesheet" href="/public/css/main.css">
+<link rel="stylesheet" href="/public/css/lunbotu.css">
+<link rel="stylesheet" href="/public/css/swiper.min.css">
+<link rel="stylesheet" href="/public/css/top.css">
+{{/block}}
+
+{{block 'content'}}
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/public/img/about-banner.jpg" alt=""></div>
+    </div>
+</div>
+<div class="main">
+    <div class="main-header">
+        <div class="container clearfix">
+            <div class="position">
+                <a href="../魏士涵/index.html">主页</a>>
+                <a href="./公司地址.html">联系我们</a>>
+                <a href="./企业简介.html">企业简介</a>
+            </div>
+            <!-- 二级导航 -->
+            <div class="subnav profile-nav">
+                <ul>
+                    <li class="active">
+                        <a href="./企业简介.html">企业简介</a>
+                    </li>
+                    <li>
+                        <a href="./企业文化.html">企业文化</a>
+                    </li>
+                    <li>
+                        <a href="./企业荣誉.html">企业荣誉</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-header">
+            <h3>
+                <span class="black">企业简介</span>
+            </h3>
+        </div>
+        <div class="profile container clearfix">
+            {{each result}}
+            <img src="{$value.imgs}" alt="">
+            <div>
+                <!-- <div>
+                    <span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        腾升装饰自1998年成立以来，梦想成为“全球规模最大，最能满足客户需求，员工最有发展前景，最讲诚信的装饰企业”。以“探索需求、满足需求、创造需求”为经营理念，孜孜不倦的深耕于装饰行业。主营业务为室内外装饰装修设计、施工与软装陈设。公司是河南省装饰行业第一家在新三板成功挂牌的装饰企业，证券简称：腾升装饰，证券代码：832569。
+                        <img src="public/img/1-201209101Q25a.jpg" alt="">
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;公司目前拥有建筑装饰工程设计专项甲级资质、建筑装修装饰工程专业承包壹级资质、建筑幕墙工程专业承包壹级资质、建筑幕墙工程设计专项乙级资质等专业资质。<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;公司实行矩阵式管理结构，设有营销管理中心、工程分公司、设计分公司、工程管理中心、投标管理中心、商务结算中心、成本控制中心、供应链管理中心、财务管理中心、人事行政中心、总经办等管理系统。公司先后通过了质量管理体系、环境管理体系和职业健康安全管理体系等系列认证。我们将不断地加强内部管理，完善管理机制，提高工程质量，为客户提供满意的服务。<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;公司竭力打造学习型组织，成立了河南装饰行业第一所企业大学“腾升商学院”，努力把平凡的人培养成优秀的管理者或专家。
+                        <img src="public/img/1-201209101S3C3.jpg" alt="">
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;公司的发展，得到社会各界的认可，连续多年被评为“河南省优秀装饰企业”。2014年被评为全国装饰行业专业化百强企业，2015年设计分公司被评为“全国最具影响力十佳设计机构”。公司设计与施工的项目多次获得河南省建筑工程“中州杯”奖、“全国建筑工程装饰奖”。<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;我们相信：只要站在客户的角度审视我们的工作，持续改进我们工作中的不足，腾升装饰一定能为客户创造更高价值。
+                    </span>
+                </div> -->
+            </div>
+            {{/each}}
+        </div>
+
+    </div>
+</div>
+
+{{/block}}
+{{block 'script'}}
+<script src="/public/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+    $('.swiper-wrapper').bind('mouseenter', function () {
+        $('.swiper-button-next').fadeIn();
+        $('.swiper-button-prev').fadeIn();
+    })
+    $('.swiper-wrapper').bind('mouseleave', function () {
+        $('.swiper-button-next').fadeOut();
+        $('.swiper-button-prev').fadeOut();
+    })
+</script>
+{{/block}}

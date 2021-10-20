@@ -1,0 +1,83 @@
+{{extend './_layouts/layout.html'}}
+{{block 'title'}}
+<title>企业文化</title>
+{{/block}}
+
+{{block 'style'}}
+<link rel="stylesheet" href="/public/css/about.css">
+<link rel="stylesheet" href="/public/css/main.css">
+<link rel="stylesheet" href="/public/css/lunbotu.css">
+<link rel="stylesheet" href="/public/css/swiper.min.css">
+<link rel="stylesheet" href="/public/css/dizhi.css">
+<link rel="stylesheet" href="/public/css/top.css">
+{{/block}}
+
+{{block 'content'}}
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/public/img/about-banner.jpg" alt=""></div>
+    </div>
+</div>
+<div class="main">
+    <div class="main-header">
+        <div class="container clearfix">
+            <div class="position">
+                <a href="../魏士涵/index.html">主页</a>>
+                <a href="./公司地址.html">联系我们</a>>
+                <a href="./企业简介.html">企业简介</a>
+            </div>
+            <!-- 二级导航 -->
+            <div class="subnav profile-nav">
+                <ul>
+                    <li class="active">
+                        <a href="./企业简介.html">企业简介</a>
+                    </li>
+                    <li>
+                        <a href="./企业文化.html">企业文化</a>
+                    </li>
+                    <li>
+                        <a href="./企业荣誉.html">企业荣誉</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-header">
+            <h3>
+                <span class="black">企业荣誉</span>
+            </h3>
+        </div>
+        <div class="profile container clearfix">
+            <div style="text-align: center;">
+                <img src="/public/img/1-2005131041492L.jpg" alt="">
+                <img src="/public/img/2-1P424153G3429.png" alt="">
+                <img src="/public/img/2-1P424153HE10.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/block}}
+{{block 'script'}}
+<script src="/public/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+    $('.swiper-wrapper').bind('mouseenter', function () {
+        $('.swiper-button-next').fadeIn();
+        $('.swiper-button-prev').fadeIn();
+    })
+    $('.swiper-wrapper').bind('mouseleave', function () {
+        $('.swiper-button-next').fadeOut();
+        $('.swiper-button-prev').fadeOut();
+    })
+</script>
+{{/block}}

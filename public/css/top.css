@@ -1,0 +1,14 @@
+.main-header .container .position {
+  margin: 20px 40px;
+  padding: 0 24px;
+  background: url(/public/img/home-icon.png) no-repeat left center;
+}
+.main-header .container .position a {
+  color: #777;
+}
+.main-header .subnav ul {
+  margin: -39px 0;
+}
+.main-header .section-header {
+  border-top: 1px solid #d6d6d6;
+}

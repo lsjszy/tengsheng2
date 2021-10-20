@@ -1,0 +1,117 @@
+{{extend './_layouts/layout.html'}}
+{{block 'title'}}
+<title>人才招聘</title>
+{{/block}}
+
+{{block 'style'}}
+<link rel="stylesheet" href="/public/css/about.css">
+<link rel="stylesheet" href="/public/css/main.css">
+<link rel="stylesheet" href="/public/css/lunbotu.css">
+<link rel="stylesheet" href="/public/css/swiper.min.css">
+<link rel="stylesheet" href="/public/css/top.css">
+{{/block}}
+
+{{block 'content'}}
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/public/img/about-banner.jpg" alt=""></div>
+    </div>
+</div>
+<div class="main">
+    <div class="main-header">
+        <div class="container clearfix">
+            <div class="position">
+                <a href="../魏士涵/index.html">主页</a>>
+                <a href="./公司地址.html">联系我们</a>>
+                <a href="./企业简介.html">企业简介</a>
+            </div>
+            <!-- 二级导航 -->
+            <div class="subnav profile-nav">
+                <ul>
+                    <li class="active">
+                        <a href="./企业简介.html">企业简介</a>
+                    </li>
+                    <li>
+                        <a href="./企业文化.html">企业文化</a>
+                    </li>
+                    <li>
+                        <a href="./企业荣誉.html">企业荣誉</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-header">
+            <h3>
+                <span class="black">人才招聘</span>
+            </h3>
+        </div>
+        <div class="profile container clearfix">
+            <span style="font-size: 20px;font-family: 微软雅黑;">
+                <br>
+                <span style="font-size: 16px;color: #777;font-weight: bold;">
+                    岗位:装饰项目经理&nbsp;&nbsp;若干<br>
+                </span>
+                <span style="font-size: 16px;font-family: 微软雅黑;color: rgb(51, 51, 51);">
+                    岗位职责：<br>
+                    1. 学历：大专以上学历;<br>
+                    2. 专业：建筑装饰工程或相关专业;<br>
+                    3. 工作经历：3年以上室内外装饰工程项目管理工作经验（有建造师资格证者优先考虑）;<br>
+                    4. 能独立完成500万元以上室内外装饰工程，熟悉施工工艺、验收标准、编制成本及其成本控制;<br>
+                    5. 熟练操作CAD及相关办公软件
+                    任职要求：较好的组织、协调管理能力、工作责任心强、具有团队意识。<br>
+                </span>
+                <span style="font-size: 16px;font-family: 微软雅黑;color: rgb(51, 51, 51);">
+                    任职资格：<br>
+                    1、大专以上学历，三年以上装饰预算工作经验;<br>
+                    2、熟练使用工程预算软件;<br>
+                    3、正确及时编制好施工图预算，正确计算工程量及套用定额，做好供料分析;<br>
+                    4、吃苦耐劳，品质良好。<br>
+                </span>
+                <br>
+                <span style="color: black;font-size: 16px;font-weight: bold;">
+                    岗位:装饰预算员 若干<br>
+                </span>
+                <span style="font-size: 16px;font-family: 微软雅黑;color: rgb(51, 51, 51);">
+                    岗位职责：<br>
+                    1、编制各工程的材料总计划，包括材料的规格、型号、材质。在材料总计划中，主材应按部位编制，耗材按工程编制;<br>
+                    2、负责编制工程的施工图预、结算及工料分析，审编工程分包，劳务层的结算;<br>
+                    3、编制每月工程进度及材料调差并及时上报有关部门审批;<br>
+                    4、审核分包、劳务层的工程进度预算；
+                    5、协助财务进行成本核算;<br>
+                    6、根据现场设计变更和签证及时调整预算;<br>
+                    7、在工程投标阶段，及时、准确做出预算，提供报价依据;<br>
+                    8、掌握准确的市场价格和预算价格，及时调整预、结算;<br>
+                    9、对各劳务层的工作内容及时提供价格，作为决策的依据;<br>
+                    10、参与投标文件、标书编制和合同评审，收集各工程系项目的造价资料，为投标提供依据;<br>
+                    11、建好公司工程预、结算及进度报表台账，填报有关报表。<br>
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+
+{{/block}}
+{{block 'script'}}
+<script src="/public/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+    $('.swiper-wrapper').bind('mouseenter', function () {
+        $('.swiper-button-next').fadeIn();
+        $('.swiper-button-prev').fadeIn();
+    })
+    $('.swiper-wrapper').bind('mouseleave', function () {
+        $('.swiper-button-next').fadeOut();
+        $('.swiper-button-prev').fadeOut();
+    })
+</script>
+{{/block}}
