@@ -19,15 +19,6 @@
   font-size: 16px;
   color: #454545;
 }
-.navbar .container .navbar-collapse ul li a span {
-  position: absolute;
-  top: 33px;
-  left: -4px;
-  width: 105px;
-  height: 33px;
-  border: 1px solid #38b549;
-  border-radius: 15px;
-}
 .navbar .container .navbar-nav > li a:hover {
   background-color: #fff;
   color: #38b549;
@@ -74,7 +65,7 @@
   border: 1px solid #ccc;
   padding: 4px 5px;
   border-radius: 20px;
-  outline: none!important;
+  outline: none !important;
 }
 .navbar .container .navbar-form .form-group span {
   position: absolute;

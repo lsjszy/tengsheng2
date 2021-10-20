@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const bodyParser = require("body-parser");
 const expressSession = require("express-session");
 // 挂载自定义的路由
-const router = require('./router')
+const router = require('./router/hezuo')
 const app = express()
 
 

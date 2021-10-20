@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-var protoSchema = new mongoose.Schema({
+var fenye2Schema = new mongoose.Schema({
     avatar: String,
     title: String,
     dio: String,
@@ -8,6 +8,6 @@ var protoSchema = new mongoose.Schema({
     display: Number
 })
 
-var Proto = mongoose.model("Proto", protoSchema);
+var Fenye2 = mongoose.model("Fenye2", fenye2Schema);
 
-module.exports = Proto;
+module.exports = Fenye2;

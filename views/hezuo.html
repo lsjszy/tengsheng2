@@ -37,17 +37,17 @@
             <div class="container">
                 <div class="row">
                     <ul>
-                        {{each result}}
+                        {{each result.records}}
                         <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="content">
-                                <a href="/topic/article" class="pic">
+                                <a href="{{$value.alink}}" class="pic">
                                     <img src="{{$value.avatar}}" style="vertical-align: middle;">
                                 </a>
                                 <div class="text">
                                     <h4>
-                                        <a href="/topic/article">{{$value.title}}</a>
+                                        <a href="{{$value.alink}}">{{$value.title}}</a>
                                     </h4>
-                                    <a href="/topic/article">{{$value.dio}}</a>
+                                    <a href="{{$value.alink}}">{{$value.dio}}</a>
                                 </div>
                             </div>
                         </li>
@@ -57,16 +57,30 @@
             </div>
 
         </div>
-        <div class="fy">
+        <!-- <div class="fy">
             <a href="/">首页</a>
-            <span class="active">1</span>
+            <a href="#" class="active">1</a>
             <a href="/topic/one">2</a>
             <a href="/topic/one2">3</a>
             <a href="/topic/one3">4</a>
             <a href="/topic/one4">5</a>
             <a href="/topic/one2">下一页</a>
             <a href="/topic/one4">末页</a>
+        </div> -->
+
+        <div class="fy">
+            <a href="/">首页</a>
+            {{if result.page > 1}}
+            <a href="/topic/one?page={{result.page-1}}">上一页</a>
+            {{/if}}
+            {{each result.display}}
+            <a href="/topic/one?page={{$value}}" class="{{$value == result.page?'active':''}}">{{$value}}</a>
+            {{/each}}
+            {{if result.page < result.pages}} <a href="/topic/one?page={{result.page+1}}">下一页</a>
+                {{/if}}
+                <!-- <a href="/topic/one4">末页</a> -->
         </div>
+
     </div>
 </div>
 {{/block}}
