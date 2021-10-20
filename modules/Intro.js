@@ -7,4 +7,4 @@ var IntroSchema = new mongoose.Schema({
 
 var Intro = mongoose.model("Intro", IntroSchema);
 
-module.exports = Intro;
+module.exports = Intro

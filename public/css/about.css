@@ -22,12 +22,21 @@
   color: #777;
 }
 .main .profile span {
+  display: block;
   font-size: 16px;
   box-sizing: border-box;
   color: #777;
   overflow: hidden;
   line-height: 1.42857143;
   clear: both;
+}
+.main .profile span .images {
+  display: none;
+}
+.main .profile img {
+  box-sizing: border-box;
+  vertical-align: middle;
+  max-width: 100%;
 }
 .main .footer {
   width: 100%;

@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="/public/css/lunbotu.css">
 <link rel="stylesheet" href="/public/css/swiper.min.css">
 <link rel="stylesheet" href="/public/css/top.css">
+<link rel="stylesheet" href="/public/css/jianjie.css">
 {{/block}}
 
 {{block 'content'}}
@@ -47,11 +48,12 @@
         </div>
         <div class="profile container clearfix">
             {{each result}}
-            <img src="{$value.imgs}" alt="">
+            <span>{{$value.texts}}</span>
+            <img class="{{$index===2?'images':''}}" src="{{$value.imgs}}" alt="">
             <div>
                 <!-- <div>
                     <span>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;
                         腾升装饰自1998年成立以来，梦想成为“全球规模最大，最能满足客户需求，员工最有发展前景，最讲诚信的装饰企业”。以“探索需求、满足需求、创造需求”为经营理念，孜孜不倦的深耕于装饰行业。主营业务为室内外装饰装修设计、施工与软装陈设。公司是河南省装饰行业第一家在新三板成功挂牌的装饰企业，证券简称：腾升装饰，证券代码：832569。
                         <img src="public/img/1-201209101Q25a.jpg" alt="">
                     </span>
