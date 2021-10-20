@@ -16,6 +16,7 @@ db.on("error", () => {
 db.once("open", function() {
     console.log("连接成功");
 });
+
 app.use(
     expressSession({
         name: "sessionID",
@@ -28,21 +29,22 @@ app.use(
         },
     })
 );
+
 app.use("/node_modules", express.static("./node_modules"));
 app.use("/public", express.static("./public"));
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 app.engine("html", require("express-art-template"));
 app.set("views", __dirname + "/views");
-
-
 
 
 // 挂载路由
 app.use('/', router);
 
 
-app.listen(8000, () => {
+app.listen(8008, () => {
     console.log('已开启');
 
 })

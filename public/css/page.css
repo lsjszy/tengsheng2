@@ -1,0 +1,114 @@
+.page {
+    height: 120px;
+}
+
+.pa {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.pa>li {
+    display: inline;
+}
+
+.pa>li>a,
+.pa>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: 10px;
+    line-height: 1.42857143;
+    color: #666666;
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+.pa>li>a:hover,
+.pa>li>span:hover,
+.pa>li>a:focus,
+.pa>li>span:focus {
+    z-index: 2;
+    background-color: #38B549;
+    color: #eeeeee;
+    border-color: #dddddd;
+}
+
+.pa>li:first-child>a,
+.pa>li:first-child>span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.pa>li:last-child>a,
+.pa>li:last-child>span {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.pa>.active>a,
+.pa>.active>span,
+.pa>.active>a:hover,
+.pa>.active>span:hover,
+.pa>.active>a:focus,
+.pa>.active>span:focus {
+    z-index: 3;
+    color: #ffffff;
+    cursor: default;
+    background-color: #38B549;
+    border-color: #38B549;
+}
+
+.pa>.disabled>span,
+.pa>.disabled>span:hover,
+.pa>.disabled>span:focus,
+.pa>.disabled>a,
+.pa>.disabled>a:hover,
+.pa>.disabled>a:focus {
+    color: #777777;
+    cursor: not-allowed;
+    background-color: #ffffff;
+    border-color: #dddddd;
+}
+
+.pa-lg>li>a,
+.pa-lg>li>span {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+}
+
+.pa-lg>li:first-child>a,
+.pa-lg>li:first-child>span {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.pa-lg>li:last-child>a,
+.pa-lg>li:last-child>span {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.pa-sm>li>a,
+.pa-sm>li>span {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.pa-sm>li:first-child>a,
+.pa-sm>li:first-child>span {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.pa-sm>li:last-child>a,
+.pa-sm>li:last-child>span {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}

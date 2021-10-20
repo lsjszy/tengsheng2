@@ -9,17 +9,25 @@
     <!-- 引入导航栏的样式 -->
     <link rel="stylesheet" href="/public/css/navbar.css">
     <link rel="stylesheet" href="/public/css/footer.css">
-    <link rel="stylesheet" href="/public/css/main.css"> {{block 'style'}} {{/block}}
+    <link rel="stylesheet" href="/public/css/main.css">
+
+    <link rel="stylesheet" href="/public/css/base.css">
+    <link rel="stylesheet" href="/public/css/lunbotu.css">
+    <link rel="stylesheet" href="/public/css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="/public/css/page.css">
+    <link rel="stylesheet" href="/public/css//txt.css">
+    <link rel="stylesheet" href="/public/css/xiangqin.css"> {{block 'style'}} {{/block}}
 </head>
 
 <body>
 
-    {{include '../_partials/header.html'}} {{block 'content'}}{{/block}} {{include '../_partials/footer.html'}}
-
+    {{include '../_partials/header.html'}} {{block 'content'}}{{/block}} {{include '../_partials/footer.html'}} {{block 'script'}} {{/block}}
 
     <script src="/public/js/jquery-3.1.1.js"></script>
     <script src="/public/js/navbar.js"></script>
-    {{block 'script'}} {{/block}}
+    <script src="/public/js/swiper.min.js"></script>
+    <script src="/public/js/base.js"></script>
+    <script src="/public/js/index.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,52 @@
+{{extend './_layouts/layout.html'}} {{block 'title'}}
+<title></title> {{/block}} {{block 'style'}}
+<link rel="stylesheet" href="/public/css/xiangqin.css"> {{/block}} {{block 'content'}}
+<!-- 分页 -->
+<div class="txt row">
+    <div class="txt-left col-md-4">
+        <span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span><a href="http://www.tone-sun.cn/news/">主页</a><span>></span>
+        <a href="">新闻资讯</a><span>></span>
+        <a href="">行业动态</a><span>></span>
+    </div>
+    <div class="txt-right col-md-4">
+        <ul class="row">
+            <li class="col-md-4 col-sm-4"><a href="/news">行业动态</a></li>
+            <li class="col-md-4 col-sm-4"><a href="/han">企业新闻</a></li>
+            <li class="col-md-4 col-sm-4"><a href="/mei">媒体报道</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="xiangqin">
+    <p class="text-center">{{actives.title}}</p>
+    <span class="bg-success ">发表时间：{{actives.data}}</span>
+    <p>{{actives.p1}}</p>
+    <img src="{{imgs.src2}}" class="img-responsive center-block" alt="">
+    <p>{{actives.p2}}</p>
+    <img src="{{imgs.src2}}" class="img-responsive center-block" alt="">
+    <p>{{actives.p3}} </p>
+    <img src="{{imgs.src3}}" class="img-responsive center-block" alt="">
+    <p>{{actives.p4}}</p>
+    <img src="{{imgs.src4}}" class="img-responsive center-block" alt="">
+    <p>{{actives.p5}}</p>
+    <img src="{{imgs.src5}}" class="img-responsive center-block" alt="">
+    <p>{{actives.p6}}</p>
+    <img src="{{imgs.src6}}" class="img-responsive center-block" alt="">
+    <p>{{actives.p7}}</p>
+    <img src="{{imgs.src7}}" class="img-responsive center-block" alt="">
+    <p>{{actives.p8}}</p>
+    <img src="{{imgs.src4}}" class="img-responsive center-block" alt="">
+    <p>{{actives.p9}}</p>
+    <img src="{{imgs.src3}}" alt="">
+</div>
+<div class="xiangqin-a">
+    <ul>
+        <li><a href="#">上一篇：跨越国界，相聚腾升，感受文化的碰撞</a></li>
+        <li><a href="#">下一篇：分享知识、培育领袖 | 2018、2019届腾升商学院毕业生职业成长述职</a></li>
+    </ul>
+</div>
+<script>
+    console.log(actives)
+</script>
+{{/block}}

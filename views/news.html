@@ -1,0 +1,50 @@
+ {{extend './_layouts/layout.html'}} {{block 'title'}}
+<title></title> {{/block}}{{block 'content'}}
+<!-- 分页 -->
+<div class="txt row">
+    <div class="txt-left col-md-4">
+        <span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span><a href="http://www.tone-sun.cn/news/">主页</a><span>></span>
+        <a href="/news">新闻资讯</a><span>></span>
+        <a href="/news">企业新闻</a><span>></span>
+    </div>
+    <div class="txt-right col-md-4">
+        <ul class="row small-nav">
+            <li class="col-md-4 col-sm-4"><a href="/news">企业新闻</a></li>
+            <li class="col-md-4 col-sm-4"><a href="/han">行业动态</a></li>
+            <li class="col-md-4 col-sm-4"><a href="/mei">媒体报道</a></li>
+        </ul>
+    </div>
+
+</div>
+{{if logs}}
+<div class="txt-pane">
+    <div class="h">{{logs[0].head}}</div>
+    {{each logs}} {{if $value.data}}
+    <div class="one-box clear-fill">
+        <div class="date hidden-xs">
+            <span class="date-one">{{$value.data.substr(8,2)}}</span><br>
+            <span class="date-two"></span><br>
+            <span class="date-three">{{$value.data}}</span>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <a href="/care/{{$value._id.toString()}}">
+                    <img class="media-object" src='{{$value.inco}}' style="width:300px">
+                </a>
+            </div>
+            <div class="media-body">
+                <a href="/care/{{$value._id.toString()}}" class="media-body-h">
+                    <h4 class="media-heading">{{$value.title}}</h4>
+                </a>
+
+                <span>浏览：437次</span>
+                <p class="hidden-xs">{{$value.content}}</p>
+                <a href="/care/{{$value._id.toString()}}" class="hidden-xs  media-body-a ">查看详情</a>
+            </div>
+        </div>
+    </div>
+    {{/if}}{{/each}}
+</div>
+<script>
+</script>
+{{/if}} {{/block}}

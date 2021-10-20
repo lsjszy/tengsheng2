@@ -1,0 +1,93 @@
+.txt {
+  margin: 10px auto;
+  border-bottom: #D6D6D6 solid 1px;
+  height: 50px;
+  line-height: 50px;
+}
+.txt .txt-left {
+  float: left;
+  text-align: center;
+}
+.txt .txt-left > * {
+  color: #777777;
+}
+.txt .txt-right {
+  float: right;
+}
+.txt .txt-right > ul {
+  text-align: center;
+}
+.txt .txt-right > ul > li {
+  float: left;
+  color: #3c3c3c;
+}
+.txt .txt-right > ul > li > a {
+  display: block;
+  color: #3c3c3c;
+}
+.txt .txt-right > ul > li > a:link {
+  color: #3c3c3c;
+}
+.txt .txt-right > ul > li > a:hover {
+  color: #38B549;
+  text-decoration: none;
+  border-bottom: 2px solid #38B549;
+}
+.txt .txt-right > ul > li > a.active {
+  display: block;
+  color: #38B549;
+  text-decoration: none;
+  border-bottom: 2px solid #38B549;
+}
+.txt-pane {
+  margin-left: 10%;
+}
+.txt-pane .h {
+  margin: 50px auto;
+  text-align: center;
+  font-size: 30px;
+}
+.txt-pane .one-box {
+  overflow: hidden;
+  border-bottom: 1px dashed #777777;
+  padding: 30px;
+}
+.txt-pane .one-box .date {
+  float: left;
+  text-align: center;
+  margin: 60px 15px;
+}
+.txt-pane .one-box .date .date-one {
+  font-size: 31px;
+}
+.txt-pane .one-box .date .date-two {
+  display: block;
+  height: 2px;
+  border-bottom: 1px dashed #777777;
+}
+.txt-pane .one-box .media .media-body {
+  padding: 10px;
+  height: 180px;
+  overflow: hidden;
+}
+.txt-pane .one-box .media .media-body .media-body-h {
+  color: #3c3c3c;
+}
+.txt-pane .one-box .media .media-body .media-body-h:hover {
+  color: #38B549;
+  text-decoration: none;
+}
+.txt-pane .one-box .media .media-body p {
+  margin-bottom: 30px;
+  width: 680px;
+}
+.txt-pane .one-box .media .media-body .media-body-a {
+  color: #545454;
+  padding: 8px 50px;
+  border: 1px #777777 solid;
+}
+.txt-pane .one-box .media .media-body .media-body-a:hover {
+  background-color: #3c3c3c;
+  color: #fff;
+  text-decoration: none;
+}

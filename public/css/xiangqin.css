@@ -1,0 +1,46 @@
+.xiangqin {
+    margin: 10px auto;
+}
+
+.xiangqin h4 {
+    text-align: center;
+}
+
+.xiangqin span {
+    text-align: center;
+    display: block;
+}
+
+.xiangqin p {
+    color: #333333;
+    font-size: 16px;
+    text-align: center;
+    margin: 18px;
+}
+
+.xiangqin img {
+    display: block;
+    margin: 0px auto;
+}
+
+.xiangqin-a {
+    padding: 20px;
+    width: 80%;
+    margin: 0px auto;
+    border-top: 1px solid #717171;
+}
+
+.xiangqin-a ul {
+    margin-left: 10%;
+}
+
+.xiangqin-a ul li a {
+    height: 20px;
+    font-size: 16px;
+    color: #717171;
+}
+
+.xiangqin-a ul li a:hover {
+    text-decoration: none;
+    color: #46A74B;
+}
