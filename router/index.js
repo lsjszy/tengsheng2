@@ -6,6 +6,7 @@ const Sagency = require('../models/Sagency')
 const Snew = require('../models/Snew')
 const Spartner = require('../models/Spartner')
 const Sproj = require('../models/Sproj')
+const Spro = require('../models/Spro')
 
 
 // 首页
@@ -20,7 +21,6 @@ router.get('/', async(req, res) => {
     let result4 = await Snew.find()
         //从数据库中查询合作客户的所有数据
     let result5 = await Spartner.find()
-    console.log(result5);
 
     // 渲染模板并传送数据
     res.render('index.html', { result: result, result2: result2, result3: result3, result4: result4, result5: result5 })
@@ -32,5 +32,10 @@ router.get('/project', async(req, res) => {
     res.render('project.html', { result: result })
 })
 
+// 产业领域二级页面
+router.get('/pro', async(req, res) => {
+    var result = await Spro.find()
+    res.render('pr.html', { result: result })
+})
 
 module.exports = router
