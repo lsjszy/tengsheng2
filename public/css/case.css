@@ -1,0 +1,9 @@
+.case {
+  margin-top: -20px;
+}
+.case div {
+  margin-top: 20px;
+}
+.case div .bottom {
+  margin-bottom: 50px;
+}

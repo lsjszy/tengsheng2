@@ -1,0 +1,67 @@
+.media {
+  padding-bottom: 30px;
+  border-bottom: 1px dashed #ccc;
+}
+.media .media-left .date {
+  padding: 50px 0px 0px 25px;
+  width: 180px;
+  height: 180px;
+}
+.media .media-left .date span {
+  display: block;
+}
+.media .media-left .date span h2 {
+  font-size: 30px;
+  padding-left: 30px;
+  display: block;
+  font-size: 31px;
+  color: #454545;
+  font-weight: bold;
+  line-height: 1;
+}
+.media .media-left .date .line {
+  width: 90px;
+  height: 1.5px;
+  background-color: #ccc;
+}
+.media .media-left .date .riqi {
+  font-size: 12px;
+  color: #838383;
+  padding: 20px 0px 0px 13px;
+}
+.media .media-middle .media-object {
+  width: 299px;
+  height: 182px;
+}
+.media .media-body {
+  width: 100%;
+  padding-left: 30px;
+}
+.media .media-body .media-heading a {
+  font-size: 18px;
+  color: #545454;
+  text-decoration: none;
+}
+.media .media-body .up {
+  display: block;
+  margin-top: 8px;
+  color: #6e6e6e;
+}
+.media .media-body p {
+  line-height: 22px;
+  color: #6e6e6e;
+  font-size: 13px;
+  margin-top: 8px;
+  height: 66px;
+}
+.media .media-body a.look {
+  display: block;
+  width: 146px;
+  height: 40px;
+  text-align: center;
+  line-height: 38px;
+  color: #545454;
+  border: 1px solid #9b9b9b;
+  margin-top: 12px;
+  text-decoration: none;
+}

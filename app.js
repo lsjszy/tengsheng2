@@ -35,12 +35,8 @@ app.use(bodyParser.json());
 app.engine("html", require("express-art-template"));
 app.set("views", __dirname + "/views");
 
-
-
-
 // 挂载路由
 app.use('/', router);
-
 
 app.listen(8000, () => {
     console.log('已开启');

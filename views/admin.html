@@ -1,0 +1,114 @@
+{{extend './_layouts/layout.html'}} {{block 'title'}}
+<title>办公类</title>
+{{/block}}{{block 'style'}}
+<!-- 导入办公部分样式 -->
+<link rel="stylesheet" href="../public/css/bangong.css" />
+{{/block}} {{block 'content'}}
+<!-- 主体身体部分 -->
+<div class="main-h1">
+  <div class="container">
+    <div class="row">
+      <h1 style="color: black">办公类</h1>
+    </div>
+  </div>
+</div>
+<!-- 办公部分 -->
+<div class="container">
+  {{if logs}} {{each logs}}
+  <div class="media">
+    <div class="media-left hidden-sm hidden-xs">
+      <div class="date">
+        <span><h2>{{$value.date.substr(8,2)}}</h2></span>
+        <span class="line"></span>
+        <span class="riqi">{{$value.date}}</span>
+      </div>
+    </div>
+    <div class="media-left media-middle">
+      <a href="{{$value.link}}">
+        <img class="media-object" src="{{$value.admin}}" />
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">
+        <a href="{{$value.link}}">{{$value.text}}</a>
+      </h4>
+      <span class="up">{{$value.browse}}</span>
+      <p class="down">....</p>
+      <a href="{{$value.link}}" class="look hidden-sm hidden-xs">查看详情</a>
+    </div>
+  </div>
+  {{/each}} {{/if}}
+  <!-- 分页部分 -->
+  <div class="container">
+    <nav aria-label="" class="text-center fenye">
+        <ul class="pa">
+            <li>
+                <a href="/admin?page=1">首页<span class=" sr-only ">(current)</span></a>
+            <li class="pagination" id="pageList"></li>
+                
+            <li class=" "><a href="/admin?page={{page+1}} ">下一页<span class="sr-only ">(current)</span></a></li>
+            <li class=" "><a href="/admin?page={{page}}">末页 <span class="sr-only ">(current)</span></a></li>
+            <input id="pageNum" type="hidden" value={{pages}}>
+        </ul>
+    </nav>
+  </div>
+</div>
+{{/block}} {{block 'script'}}
+<script >
+//分页
+$(function() {
+    var pageNum = $('#pageNum').val();
+    // console.log(pageNum)
+    var htmlLet = "";
+    for (var i = 1; i <= pageNum; i++) {
+        htmlLet += "<a class='active' role='button' href='/admin?page=" + i + "'>" + i + "</a>";
+    }
+    $('#pageList').html(htmlLet)
+})
+</script>
+<script>
+  // 轮播图
+  var swiper = new Swiper(".swiper-container", {
+    loop: true,
+    pagination: ".swiper-pagination",
+    nextButton: ".swiper-button-next",
+    prevButton: ".swiper-button-prev",
+    paginationClickable: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: 2500,
+    autoplayDisableOnInteraction: false,
+  });
+  $(".swiper-wrapper").bind("mouseenter", function () {
+    $(".swiper-button-next").fadeIn();
+    $(".swiper-button-prev").fadeIn();
+  });
+  $(".swiper-wrapper").bind("mouseleave", function () {
+    $(".swiper-button-next").fadeOut();
+    $(".swiper-button-prev").fadeOut();
+  });
+  // 在线咨询
+  $("#close_im").bind("click", function () {
+    $("#main-im").css("height", "0");
+    $("#im_main").hide();
+    $("#open_im").show();
+  });
+  $("#open_im").bind("click", function (e) {
+    $("#main-im").css("height", "272");
+    $("#im_main").show();
+    $(this).hide();
+  });
+  // 返回顶部
+  $(".go-top").bind("click", function () {
+    $(window).scrollTop(0);
+  });
+  // 返回顶部
+  $(window).scroll(function () {
+    if ($(document).scrollTop() >= 300) {
+      $(".go-top").fadeIn();
+    } else {
+      $(".go-top").fadeOut();
+    }
+  });
+</script>
+{{/block}}

@@ -1,0 +1,150 @@
+{{extend './_layouts/layout.html'}} {{block 'title'}}
+<title>工程案例/装修设计_郑州装饰公司</title>
+{{/block}} {{block 'style'}}{{/block}} {{block 'content'}}
+<!-- 主体部分 -->
+<div class="main">
+  <!-- 主体头部 -->
+  <div class="main-header">
+    <div class="container">
+      <div class="row">
+        <div class="div-left col-md-3">
+          <!-- 引用图标 -->
+          <span class="home">
+            <img src="/public/img/home-icon_1.png" />
+          </span>
+          <a href="#">主页</a>
+          <span class="glyphicon glyphicon-menu-right"></span>
+          <a href="/case">工程案例</a>
+          <span class="glyphicon glyphicon-menu-right"></span>
+          <a href="/design">装修设计</a>
+          <span class="glyphicon glyphicon-menu-right"></span>
+        </div>
+        <div class="div-right col-md-2 hidden-xs pull-right">
+          <ul>
+            <li><a href="/estate">地产类</a></li>
+            <li><a href="/admin">办公类</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 主体身体部分 -->
+  <div class="main-h1">
+    <div class="container">
+      <div class="row">
+        <h1>装修设计</h1>
+      </div>
+    </div>
+  </div>
+  <div class="main-body">
+    {{if logs}}
+    <div class="container-fluid">
+      <div class="row text-center">
+        <ul>
+          {{each logs}}
+          <li>
+            <div class="content">
+              <a href="{{$value.link}}"><img src="{{$value.picture}}" /></a>
+              <div class="text">
+                <h4>
+                  <a href="{{$value.link}}" class="design">{{$value.barText}}</a>
+                </h4>
+                <a href="{{$value.link}}" class="detail">查看详情</a>
+              </div>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+  <!-- 分页部分 -->
+</div>
+<div class="container fenye">
+  <nav aria-label="" class="text-center">
+    <ul class="pa">
+      <li>
+        <a href="/design?page=1">首页<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="pagination" id="pageList"></li>
+
+      <li class="">
+        <a href="/design?page={{page+1}} "
+          >下一页<span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="">
+        <a href="/design?page={{page}}"
+          >末页 <span class="sr-only">(current)</span></a
+        >
+      </li>
+      <input id="pageNum" type="hidden" value="{{pages}}" />
+    </ul>
+  </nav>
+</div>
+{{/block}} {{block 'script'}}
+<script>
+  //分页
+  $(function () {
+    var pageNum = $("#pageNum").val();
+    // console.log(pageNum)
+    var htmlLet = "";
+    for (var i = 1; i <= pageNum; i++) {
+      htmlLet +=
+        "<a class='active' role='button' href='/design?page=" +
+        i +
+        "'>" +
+        i +
+        "</a>";
+    }
+    $("#pageList").html(htmlLet);
+  });
+</script>
+<script>
+  // 轮播图
+  var swiper = new Swiper(".swiper-container", {
+    loop: true,
+    pagination: ".swiper-pagination",
+    nextButton: ".swiper-button-next",
+    prevButton: ".swiper-button-prev",
+    paginationClickable: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: 2500,
+    autoplayDisableOnInteraction: false,
+  });
+  $(".swiper-wrapper").bind("mouseenter", function () {
+    $(".swiper-button-next").fadeIn();
+    $(".swiper-button-prev").fadeIn();
+  });
+  $(".swiper-wrapper").bind("mouseleave", function () {
+    $(".swiper-button-next").fadeOut();
+    $(".swiper-button-prev").fadeOut();
+  });
+  // 在线咨询
+  $("#close_im").bind("click", function () {
+    $("#main-im").css("height", "0");
+    $("#im_main").hide();
+    $("#open_im").show();
+  });
+  $("#open_im").bind("click", function (e) {
+    $("#main-im").css("height", "272");
+    $("#im_main").show();
+    $(this).hide();
+  });
+  // 返回顶部
+  $(".go-top").bind("click", function () {
+    $(window).scrollTop(0);
+  });
+  // 返回顶部
+  $(window).scroll(function () {
+    if ($(document).scrollTop() >= 300) {
+      $(".go-top").fadeIn();
+    } else {
+      $(".go-top").fadeOut();
+    }
+  });
+</script>
+{{/block}}

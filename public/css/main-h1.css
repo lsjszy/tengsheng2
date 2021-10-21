@@ -1,0 +1,114 @@
+.main-h1 {
+  margin: 54px 0px 43.2px 0px;
+}
+.main-h1 h1 {
+  color: #38b549;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+.main-body ul {
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.main-body ul li {
+  display: inline-block;
+  width: 407.99px;
+  height: 441.6px;
+}
+.main-body ul li .content a {
+  display: block;
+  width: 384px;
+  overflow: hidden;
+}
+.main-body ul li .content a img {
+  width: 100%;
+  transition: all 0.3s;
+}
+.main-body ul li .content:hover a img {
+  transform: scale(1.1);
+}
+.main-body ul li .text {
+  width: 383.51px;
+  height: 92.6px;
+  margin-top: 10px;
+  background-color: #f5f5f5;
+  padding: 15px 20px 20px 20px;
+}
+.main-body ul li .text h4 {
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+}
+.main-body ul li .text h4 .design {
+  width: 343.51px;
+  display: block;
+  height: 16px;
+  color: #5f5f5f;
+  text-decoration: none;
+}
+.main-body ul li .text .detail {
+  width: 82px;
+  height: 21.6px;
+  display: block;
+  padding: 1px 16px;
+  border: 1px solid #c3c3c3;
+  font-size: 12px;
+  color: #5f5f5f;
+  margin-left: 130px;
+  text-decoration: none;
+}
+.main-body ul li .text:hover {
+  background-color: #999;
+}
+.main-body ul li .text:hover .design {
+  color: #fff;
+}
+.main-body ul li .text:hover .detail {
+  color: #fff;
+  border: 1px solid #fff;
+}
+.main-body ul li .content1 a {
+  display: block;
+  width: 384px;
+  height: 239px;
+  overflow: hidden;
+}
+.main-body ul li .content1 a img {
+  width: 384px;
+  height: 239px;
+  transition: all 0.3s;
+}
+.main-body ul li .content1:hover a img {
+  transform: scale(1.1);
+}
+.main-body ul li .content2 a {
+  display: block;
+  width: 384px;
+  height: 355px;
+  overflow: hidden;
+}
+.main-body ul li .content2 a img {
+  width: 384px;
+  height: 355px;
+  transition: all 0.3s;
+}
+.main-body ul li .content2:hover a img {
+  transform: scale(1.1);
+}
+.main-body ul li .content3 a {
+  width: 384px;
+  height: 440px;
+  display: block;
+  overflow: hidden;
+}
+.main-body ul li .content3 a img {
+  width: 384px;
+  height: 440px;
+  transition: all 0.3s;
+}
+.main-body ul li .content3:hover a img {
+  transform: scale(1.1);
+}

@@ -1,0 +1,110 @@
+{{extend './_layouts/layout.html'}} {{block 'title'}}
+<title>地产类</title>
+{{/block}}
+{{block 'style'}}
+<link rel="stylesheet" href="/public/css/main-photo.css">
+{{/block}} 
+{{block 'content'}}
+    <!-- 主体部分 -->
+    <div class="main">
+     <!-- 主体头部 -->
+     <div class="main-header">
+       <div class="container">
+         <div class="row">
+           <div class="div-left col-md-3">
+             <!-- 引用图标 -->
+             <span class="home">
+               <img src="/public/img/home-icon_1.png" />
+             </span>
+             <a href="#">主页</a>
+             <span class="glyphicon glyphicon-menu-right"></span>
+             <a href="./00、工程案例.html">工程案例</a>
+             <span class="glyphicon glyphicon-menu-right"></span>
+             <a href="./01、装修设计.html">装修设计</a>
+             <span class="glyphicon glyphicon-menu-right"></span>
+           </div>
+           <div class="div-right col-md-2 hidden-xs pull-right">
+             <ul>
+               <li><a href="./05、地产类.html">地产类</a></li>
+               <li><a href="./06、办公类.html">办公类</a></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+     <!-- 主体身体部分 -->
+     {{each result}}
+       <div class="artical-header  container">
+           <h1>{{$value.title}}</h1>
+           <p>
+               <span class="time">{{$value.time}}</span>
+               <span class="show">
+                {{$value.show}}
+               </span>
+           </p>
+           <div class="three">
+             <span>{{$value.name}}</span>
+             <span>{{$value.address}}</span>
+             <span>{{$value.display}}</span>
+           </div>
+       <img src="{{$value.ph}}"  width="800px" height="533px">
+       <img src="{{$value.pho}}" width="800px" height="533px">
+       <img src="{{$value.phot}}" width="800px" height="533px">
+       <img src="{{$value.photo}}" width="800px" height="533px">
+       <span>{{$value.text}}</span>
+       <div class="linear"></div>
+       <div class="bottom">
+          <a href=""><span>上一篇：北海龙城售楼部软装工程</span></a>
+          <span class="next">下一篇：东正颐和府营销会所精装修及软装工程</span>
+       </div>
+    </div>
+       {{/each}}
+   
+{{/block}} 
+{{block 'script'}}
+<script>
+    // 轮播图
+    var swiper = new Swiper(".swiper-container", {
+      loop: true,
+      pagination: ".swiper-pagination",
+      nextButton: ".swiper-button-next",
+      prevButton: ".swiper-button-prev",
+      paginationClickable: true,
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: 2500,
+      autoplayDisableOnInteraction: false,
+    });
+    $(".swiper-wrapper").bind("mouseenter", function () {
+      $(".swiper-button-next").fadeIn();
+      $(".swiper-button-prev").fadeIn();
+    });
+    $(".swiper-wrapper").bind("mouseleave", function () {
+      $(".swiper-button-next").fadeOut();
+      $(".swiper-button-prev").fadeOut();
+    });
+    // 在线咨询
+    $("#close_im").bind("click", function () {
+      $("#main-im").css("height", "0");
+      $("#im_main").hide();
+      $("#open_im").show();
+    });
+    $("#open_im").bind("click", function (e) {
+      $("#main-im").css("height", "272");
+      $("#im_main").show();
+      $(this).hide();
+    });
+    // 返回顶部
+    $(".go-top").bind("click", function () {
+      $(window).scrollTop(0);
+    });
+    // 返回顶部
+    $(window).scroll(function () {
+      if ($(document).scrollTop() >= 300) {
+        $(".go-top").fadeIn();
+      } else {
+        $(".go-top").fadeOut();
+      }
+    });
+  </script>
+{{/block}}

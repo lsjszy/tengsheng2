@@ -1,0 +1,124 @@
+{{extend './_layouts/layout.html'}} {{block 'title'}}
+<title>工程案例/软装服务_郑州装饰公司</title>
+{{/block}} 
+{{block 'style'}}{{/block}} 
+{{block 'content'}}
+   <!-- 主体部分 -->
+   <div class="main">
+    <!-- 主体头部 -->
+    <div class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="div-left ">
+            <!-- 引用图标 -->
+            <span class="home">
+              <img src="/public/img/home-icon_1.png" />
+            </span>
+            <a href="#">主页</a>
+            <span class="glyphicon glyphicon-menu-right"></span>
+            <a href="/case">工程案例</a>
+            <span class="glyphicon glyphicon-menu-right"></span>
+            <a href="/service">软装服务</a>
+            <span class="glyphicon glyphicon-menu-right"></span>
+          </div>
+          <div
+            class="div-right  hidden-sm hidden-xs"
+            style="width: 550px" 
+          >
+            <ul>
+              <li ><a href="/design" >装修设计</a></li>
+              <li><a href="/construction">装修施工</a></li>
+              <li><a href="/service" class="current">软装服务</a></li>
+              <li><a href="/project">墙幕工程</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 主体身体部分 -->
+    <div class="main-h1">
+      <div class="container">
+        <div class="row">
+          <h1>软装服务</h1>
+        </div>
+      </div>
+    </div>
+    <div class="main-body">
+      <div class="container-fluid" style="margin-bottom: -40px">
+        <div class="row text-center">
+          <ul>
+            {{each result}}
+            <li>
+              <div class="content">
+                <a href="{{$value.link}}"><img src="{{$value.picture}}" alt="" /></a>
+                <div class="text">
+                  <h4>
+                    <a href="{{$value.link}}" class="design">{{$value.barText}}</a>
+                  </h4>
+                  <a href="{{$value.link}}" class="detail">查看详情</a>
+                </div>
+              </div>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fenye">
+      <div class="container-fluid">
+        <div class="row text-center">
+          <a href="#" class="current" style="font-size: 17px"
+            >共 1页3条记录</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+{{/block}} 
+{{block 'script'}}
+<script>
+    // 轮播图
+    var swiper = new Swiper(".swiper-container", {
+      loop: true,
+      pagination: ".swiper-pagination",
+      nextButton: ".swiper-button-next",
+      prevButton: ".swiper-button-prev",
+      paginationClickable: true,
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: 2500,
+      autoplayDisableOnInteraction: false,
+    });
+    $(".swiper-wrapper").bind("mouseenter", function () {
+      $(".swiper-button-next").fadeIn();
+      $(".swiper-button-prev").fadeIn();
+    });
+    $(".swiper-wrapper").bind("mouseleave", function () {
+      $(".swiper-button-next").fadeOut();
+      $(".swiper-button-prev").fadeOut();
+    });
+    // 在线咨询
+    $("#close_im").bind("click", function () {
+      $("#main-im").css("height", "0");
+      $("#im_main").hide();
+      $("#open_im").show();
+    });
+    $("#open_im").bind("click", function (e) {
+      $("#main-im").css("height", "272");
+      $("#im_main").show();
+      $(this).hide();
+    });
+    // 返回顶部
+    $(".go-top").bind("click", function () {
+      $(window).scrollTop(0);
+    });
+    // 返回顶部
+    $(window).scroll(function () {
+      if ($(document).scrollTop() >= 300) {
+        $(".go-top").fadeIn();
+      } else {
+        $(".go-top").fadeOut();
+      }
+    });
+  </script>
+{{/block}}

@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {{block 'title'}} {{/block}}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{block 'title'}} {{/block}}
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.css" />
     <!-- 引入导航栏的样式 -->
-    <link rel="stylesheet" href="/public/css/navbar.css">
-    <link rel="stylesheet" href="/public/css/footer.css">
-    <link rel="stylesheet" href="/public/css/main.css"> {{block 'style'}} {{/block}}
-</head>
+    <link rel="stylesheet" href="/public/css/navbar.css" />
+    <link rel="stylesheet" href="/public/css/footer.css" />
+    <!-- 引入轮播图样式 -->
+    <link rel="stylesheet" href="/public/css/swiper.min.css" />
+    <link rel="stylesheet" href="/public/css/lunbotu.css" />
+    <link rel="stylesheet" href="/public/css/main.css" />
+    <!-- 导入主体部分样式 -->
+    <link rel="stylesheet" href="/public/css/main-header.css" />
+    <link rel="stylesheet" href="/public/css/main-h1.css" />
+    <!-- 导入分页部分样式 -->
+    <link rel="stylesheet" href="/public/css/fenye.css" />
+    <!-- 导入工程案例部分样式 -->
+    <link rel="stylesheet" href="/public/css/case.css" />
+    <!-- 引入在线咨询的样式 -->
+    <link rel="stylesheet" href="/public/css/main.css" />
+    {{block 'style'}} {{/block}}
+  </head>
 
-<body>
-
-    {{include '../_partials/header.html'}} {{block 'content'}}{{/block}} {{include '../_partials/footer.html'}}
-
+  <body>
+    {{include '../_partials/header.html'}} {{block 'content'}} {{/block}}
+    {{include '../_partials/footer.html'}}
 
     <script src="/public/js/jquery-3.1.1.js"></script>
     <script src="/public/js/go_top.js"></script>
     <script src="/public/js/navbar.js"></script>
+    <script src="/public/js/swiper.min.js"></script>
     {{block 'script'}} {{/block}}
-</body>
-
+  </body>
 </html>
