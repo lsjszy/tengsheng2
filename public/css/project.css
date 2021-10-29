@@ -1,0 +1,157 @@
+a {
+  text-decoration: none!important;
+}
+.project {
+  margin-top: 30px;
+  height: 400px;
+  background-color: #e9e9e9;
+}
+.project .container {
+  position: relative;
+}
+.project .container .project-header .line {
+  margin-top: 40px;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+.project .container .project-header .font {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: -120px;
+  width: 240px;
+  height: 80px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #e9e9e9;
+}
+.project .container .project-header .font h3 {
+  font-size: 30px;
+}
+.project .container .project-header .font p {
+  margin-top: -15px;
+  font-size: 18px;
+  color: #b8b8b8;
+}
+.project .container .project-body {
+  margin-top: 70px;
+}
+.project .container .project-body .btn {
+  position: absolute;
+  top: 158px;
+  text-align: center;
+  font-size: 60px;
+  color: #717171;
+  z-index: 20;
+}
+.project .container .project-body .prev {
+  left: -55px;
+}
+.project .container .project-body .next {
+  right: -55px;
+}
+.project .container .project-body .box {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+.project .container .project-body .box ul {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 0;
+  margin: 0;
+  width: 1170px;
+  list-style: none ;
+  z-index: 10;
+}
+.project .container .project-body .box ul li {
+  position: relative;
+  width: 24%;
+  text-align: center;
+  float: left;
+  margin-right: 5px;
+}
+.project .container .project-body .box ul li:last-child {
+  margin-right: 0px;
+}
+.project .container .project-body .box ul li a {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 7px;
+  border: 1px solid #ccc;
+}
+.project .container .project-body .box ul li a img {
+  width: 100%;
+}
+.project .container .project-body .box ul li a .mask {
+  display: none;
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 264px;
+  height: 160px;
+  text-align: center;
+  padding: 11% 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.project .container .project-body .box ul li a .mask .fdj {
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  background: url(../img/fdj.png) no-repeat center;
+}
+.project .container .project-body .box ul li a .mask .project-arrow {
+  display: block;
+  position: absolute;
+  bottom: -22px;
+  left: 47%;
+  margin-left: -20px;
+  z-index: 10;
+  width: 54px;
+  height: 54px;
+  color: #fff;
+  background: url(../img/wu.png) no-repeat center;
+}
+.project .container .project-body .box ul li a .mask h4 {
+  display: block;
+  color: #fff;
+}
+.project .container .project-body .box ul li > p {
+  font-size: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1230px) {
+  .project-body .btn {
+    width: 30px;
+    height: 52px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff !important;
+    font-size: 30px!important;
+  }
+  .project-body .prev {
+    left: 16px!important;
+    top: 180px!important;
+  }
+  .project-body .next {
+    right: 16px!important;
+    top: 180px!important;
+  }
+  .mask {
+    height: 160px!important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .mask {
+    height: 194px!important;
+  }
+  .mask h4 {
+    display: none!important;
+  }
+  .mask .project-arrow {
+    display: none!important;
+  }
+}

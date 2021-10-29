@@ -1,3 +1,210 @@
 {{extend './_layouts/layout.html'}} {{block 'title'}}
 <title>首页</title>
-{{/block}} {{block 'style'}}{{/block}} {{block 'content'}} {{/block}} {{block 'script'}} {{/block}}
+{{/block}} {{block 'style'}}
+
+<link rel="stylesheet" href="/public/css/lunbotu.css">
+<link rel="stylesheet" href="/public/css/swiper.min.css">
+<link rel="stylesheet" href="/public/css/about.css">
+<link rel="stylesheet" href="/public/css/project.css">
+<link rel="stylesheet" href="/public/css/agency.css">
+<link rel="stylesheet" href="/public/css/new.css">
+<link rel="stylesheet" href="/public/css/partner.css"> {{/block}} {{block 'content'}}
+<!-- 轮播图 -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/public/img/1.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="/public/img/2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="/public/img/3.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="/public/img/4.jpg" alt=""></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next">&gt;</div>
+    <div class="swiper-button-prev">&lt;</div>
+</div>
+<!-- 关于我们 -->
+<div class="about">
+    <div class="container">
+        <div class="section-header">
+            <div class="line"></div>
+            <div class="font">
+                <h3>关于我们</h3>
+                <p>ABOUT US</p>
+            </div>
+        </div>
+        <div class="about-body">
+            <div class="about-us-l">
+                <div class="left col-xs-12">
+                    <h1>郑州装饰公司-腾升建筑装饰股份有限公司</h1>
+                    <p>腾升装饰自1998年成立以来，梦想成为全球规模最大，最能满足客户需求，员工最有发展前景，最讲诚信的装饰企业。以探索需求、满足需求、创造需求为经营理念，孜孜不倦的深耕于装饰行业。主营业务为室内外装饰装修设计、施工与软装陈设。公司是河南省装饰行业第一家在新三板成功挂牌的装饰企业，证券简称：腾升装饰，证券代码：832569。 公司目前拥有建筑装饰工程设计</p>
+                    <a href="" class="">查看详情</a>
+                </div>
+            </div>
+            <div class="about-us-r">
+                <ul>
+                    {{each result}}
+                    <li>
+                        <a href="#">
+                            <img src="{{$value.avatar}}" alt="">
+                        </a>
+                        <h3><a href="">{{$value.nickname}}</a></h3>
+                        <p>{{$value.Englishname}}</p>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 产业领域 -->
+<div class="project">
+    <div class="container">
+        <div class="project-header">
+            <div class="line"></div>
+            <div class="font">
+                <h3>产业领域</h3>
+                <p>CAREER FIELD</p>
+            </div>
+        </div>
+        <div class="project-body">
+            <a href="javascript:;" class="btn prev">&lt;</a>
+            <a href="javascript:;" class="btn next">&gt;</a>
+            <div class="box">
+                <ul>
+                    {{each result2}}
+                    <li>
+                        <a href="">
+                            <img src="{{$value.avatar}}" alt="">
+                            <div class="mask">
+                                <span class="fdj"></span>
+                                <h4>{{$value.nickname}}</h4>
+                                <span class="project-arrow"></span>
+                            </div>
+                        </a>
+                        <p>{{$value.nickname}}</p>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- 工程案列 -->
+<div class="agency-brand ">
+    <div class="project-header container">
+        <div class="line"></div>
+        <div class="font">
+            <h3>工程案列</h3>
+            <p>CASE</p>
+        </div>
+    </div>
+    <div class="brand-type container">
+        <ul>
+            {{each result3}}
+            <li><a href="{{$value.brandlink}}">{{$value.nickname}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="brand-body container-fluid">
+        <div class="item">
+            <ul>
+                {{each result3}}
+                <li>
+                    <a href="{{$value.link}}">
+                        <img src="{{$value.avatar}}" alt="龙湖天钜售楼部精装修工程">
+                        <div class="mask">
+                            <h4>{{$value.itemname}}</h4>
+                            <span>查看更多+</span>
+                        </div>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 新闻资讯 -->
+<div class="news">
+    <div class="news-header container">
+        <div class="line"></div>
+        <div class="font">
+            <h3>新闻资讯</h3>
+            <p>NEWS</p>
+        </div>
+    </div>
+    <div class="news-body container">
+        <div class="important-news">
+            <a href="">
+                <img src="/public/img/dahui.jpg" alt="">
+                <div class="date">
+                    <span class="day">02</span>
+                    <span class="month">2021-03</span>
+                </div>
+            </a>
+            <h4><a href="">腾升装饰2021工作规划暨2020总结表彰大会</a></h4>
+            <p>2月27日上午，腾升装饰 2021年工作规划 暨 2020年总结表彰大会 在天鹅城酒店隆重举行。公司董事长杨少波、总经理刘振及全体...</p>
+        </div>
+        <div class="orther-news">
+            <ul>
+                {{each result4}}
+                <li>
+                    <div class="date">
+                        <span class="day">{{$value.day}}</span>
+                        <span class="month">{{$value.month}}</span>
+                    </div>
+                    <div class="content">
+                        <h4><a href="{{$value.alink}}">{{$value.name}}</a></h4>
+                        <p>{{$value.cont}}</p>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="more container">
+        <a href="/news/">查看更多</a>
+    </div>
+</div>
+<!-- 合作客户 -->
+<div class="partner">
+    <div class="partner-header container">
+        <div class="line"></div>
+        <div class="font">
+            <h3>合作客户</h3>
+            <p>CUSTOMER</p>
+        </div>
+    </div>
+    <div class="partner-body">
+        <div class="row">
+            <ul>
+                {{each result5}}
+                <li class="col-md-2 col-sm-2 col-xs-4">
+                    <a href="{{$value.alink}}"> <img src="{{$value.avatar}}" alt="合作客户"> <span class="mask"></span> </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+</div>
+{{/block}} {{block 'script'}}
+
+<script src="/public/js/swiper.min.js"></script>
+<script src="/public/js/asbout.js"></script>
+<script src="/public/js/project.js"></script>
+
+<script>
+    // // 轮播图
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+</script>
+{{/block}}

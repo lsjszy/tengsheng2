@@ -1,0 +1,122 @@
+.agency-brand {
+  position: relative;
+  margin-top: 30px;
+  height: 489px;
+}
+.agency-brand .project-header .line {
+  margin-top: 50px;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+.agency-brand .project-header .font {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: -120px;
+  width: 240px;
+  height: 80px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #fff;
+}
+.agency-brand .project-header .font h3 {
+  font-size: 30px;
+}
+.agency-brand .project-header .font p {
+  margin-top: -15px;
+  font-size: 18px;
+  color: #b8b8b8;
+}
+.agency-brand .brand-type {
+  display: block;
+  margin-top: 60px;
+}
+.agency-brand .brand-type ul {
+  margin-left: 70px;
+}
+.agency-brand .brand-type ul li {
+  float: left;
+  width: 170px;
+  height: 48px;
+  margin: 0 30px;
+  text-align: center;
+  line-height: 48px;
+  border-radius: 20px;
+  font-size: 18px;
+  color: #8d8d8d;
+  background-color: #f2f2f2;
+}
+.agency-brand .brand-type ul li a {
+  color: #8d8d8d;
+  display: block;
+}
+.agency-brand .brand-body {
+  margin-top: 40px;
+}
+.agency-brand .brand-body .item {
+  overflow: hidden;
+}
+.agency-brand .brand-body .item ul {
+  width: 1287px;
+  padding: 0;
+}
+.agency-brand .brand-body .item ul li {
+  float: left;
+  width: 25%;
+  padding: 8px 6px;
+}
+.agency-brand .brand-body .item ul li a {
+  display: inline-block;
+  position: relative;
+}
+.agency-brand .brand-body .item ul li a img {
+  width: 100%;
+  height: 274px;
+}
+.agency-brand .brand-body .item ul li a:hover .mask {
+  display: block;
+}
+.agency-brand .brand-body .item ul li a .mask {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 274px;
+  padding: 20% 10px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  text-align: center;
+}
+.agency-brand .brand-body .item ul li a .mask h4 {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  margin-bottom: 70px;
+}
+.agency-brand .brand-body .item ul li a .mask span {
+  width: 96px;
+  height: 28px;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  line-height: 28px;
+  font-size: 14px;
+}
+@media screen and (max-width: 992px) {
+  .brand-type ul {
+    margin: 0!important;
+  }
+  .brand-type ul li {
+    width: 20%!important;
+    margin: 1%!important;
+    height: 40px!important;
+    line-height: 40px;
+    font-size: 16px!important;
+  }
+}

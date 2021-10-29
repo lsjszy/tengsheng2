@@ -1,0 +1,62 @@
+.partner {
+  position: relative;
+  margin-top: 30px;
+}
+.partner .partner-header .line {
+  margin-top: 50px;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+.partner .partner-header .font {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: -120px;
+  width: 240px;
+  height: 80px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #fff;
+}
+.partner .partner-header .font h3 {
+  font-size: 30px;
+}
+.partner .partner-header .font p {
+  margin-top: -15px;
+  font-size: 18px;
+  color: #b8b8b8;
+}
+.partner .partner-body {
+  margin-top: 70px;
+  width: 100%;
+}
+.partner .partner-body ul {
+  height: 100%;
+  background-color: pink;
+}
+.partner .partner-body ul li {
+  height: 100%;
+  padding: 5px;
+}
+.partner .partner-body ul li a {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+.partner .partner-body ul li a img {
+  width: 100%;
+}
+.partner .partner-body ul li a .mask {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.partner .partner-body ul li a:hover .mask {
+  display: block;
+}

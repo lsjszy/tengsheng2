@@ -1,0 +1,54 @@
+{{extend './_layouts/layout.html'}} {{block 'title'}}
+<title>产业领域</title>
+{{/block}} {{block 'style'}}
+<link rel="stylesheet" href="/public/css/lunbotu.css">
+<link rel="stylesheet" href="/public/css/swiper.min.css">
+<link rel="stylesheet" href="/public/css/main_h.css"> {{/block}} {{block 'content'}}
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/public/img/about-banner.jpg" alt=""></div>
+    </div>
+</div>
+<!-- 主体 -->
+<div class="main">
+    <div class="main-header">
+        <div class="container">
+            <!-- 当前位置 -->
+            <div class="position">
+                <a href='/'>主页</a>>
+                <a href=''>产业领域</a>
+            </div>
+        </div>
+    </div>
+    <!-- 产业领域 -->
+    <div class="section-header">
+        <h3><span>产业领域</span></h3>
+    </div>
+    <div class="profile container">
+        {{each result}}
+        <a href="{{$value.alink}}">
+            <img src="{{$value.avatar}}" class="{{$index == 2||$index==3?'a1':''}}" style="text-align: center; width: 467px; height: 113px;">
+        </a>
+        {{/each}}
+        <div>
+            <img src="/public/img/c5.jpg" alt="" style="text-align: center; width: 915px; height: 335px;">
+        </div>
+    </div>
+</div>
+{{/block}} {{block 'script'}}
+<script src="/public/js/swiper.min.js"></script>
+<script>
+    // // 轮播图
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+</script>
+{{/block}}

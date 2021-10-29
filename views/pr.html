@@ -1,0 +1,54 @@
+{{extend './_layouts/layout.html'}} {{block 'title'}}
+<title>产业</title>
+{{/block}} {{block 'style'}}
+<link rel="stylesheet" href="/public/css/lunbotu.css">
+<link rel="stylesheet" href="/public/css/swiper.min.css">
+<link rel="stylesheet" href="/public/css/pro-p.css"> {{/block}} {{block 'content'}}
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/public/img/about-banner.jpg" alt=""></div>
+    </div>
+</div>
+<!-- 主体 -->
+<div class="main">
+    <div class="main-header">
+        <div class="container">
+            <!-- 当前位置 -->
+            <div class="position">
+                <a href=''>主页</a>>
+                <a href=''>产业领域</a>
+                <a href=''>业务</a>
+            </div>
+        </div>
+    </div>
+    <!-- 产业领域 -->
+    {{each result}}
+    <div class="section-header">
+        <h1><span>{{$value.title}}</span></h1>
+        <div class="sec">
+            <span>{{$value.time}}</span>
+            <span>{{$value.show}}</span>
+        </div>
+    </div>
+    <div class="profile container">
+        <img src="{{$value.avatar}}" alt="">
+    </div>
+    {{/each}}
+</div>
+{{/block}} {{block 'script'}}
+<script src="/public/js/swiper.min.js"></script>
+<script>
+    // // 轮播图
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+</script>
+{{/block}}
